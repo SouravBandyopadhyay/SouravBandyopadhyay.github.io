@@ -1,0 +1,36 @@
+.map-project-div {
+  width: 100%;
+  height: max-content;
+  /* display: inline-block */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.project-cover-pic {
+  object-fit: fill;
+  width: 450pc;
+  height: 250px;
+  border-radius: 10px;
+}
+.project-link-github {
+  text-decoration: none;
+}
+.tech-stacks-project-component {
+  /* border: 1px solid yellow; */
+  width: 50%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+}
+
+/* Project Media Query */
+@media (max-width: 906px) {
+  .map-project-div {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
