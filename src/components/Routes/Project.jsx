@@ -45,7 +45,7 @@ const Project = () => {
       img_link:
         "https://i.postimg.cc/65R55znb/Web-capture-22-10-2022-183947-serene-khapse-d163a3-netlify-app.jpg",
       desc: "StyleCraze is a global women's platform that aims to answer one question: what do women want? From health and wellness to lifestyle and beauty.",
-      funct:["Displaying data using API","Infinite Loop Banner","Use of React to calculate BMI","Loading Effect Using React"]
+      funct:["Displaying data using API","Infinite Loop Banner","Use of React to calculate BMI"]
     }
   ];
   return (
@@ -64,8 +64,12 @@ const Project = () => {
           />
         ))}
       </div>
-      <div className="github-stats-div" >
-      <GitHubCalendar username="SouravBandyopadhyay" blockMargin={6} />
+      <div className="github-stats-div" style={{width:"100%", display:"inline-grid", margin:"auto",justifyContent:"center",gap:"2rem"}}  >
+        <h2>Github Heat Map</h2>
+      <GitHubCalendar username="SouravBandyopadhyay" blockMargin={6}
+      blockSize={15}
+      fontSize={16}
+      />
       </div>
     </div>
   );

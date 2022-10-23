@@ -1,0 +1,14 @@
+.about-me-desc-p{
+    font-size: 1.5rem;
+}
+.about-me-parent-box{
+    border: 4px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.about-me-parent-box > div>p{
+    text-align:left;
+    padding: 1rem;
+    word-spacing: 2px;
+}
