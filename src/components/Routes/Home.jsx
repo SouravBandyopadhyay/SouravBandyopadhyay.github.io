@@ -54,7 +54,6 @@ const Home = () => {
             padding: "1.2rem",
             margin: "auto",
             objectFit: "contain",
-
           }}
         />
       </div>
