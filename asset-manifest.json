@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a802d119.css",
-    "main.js": "/static/js/main.6742902b.js",
+    "main.css": "/static/css/main.827901d0.css",
+    "main.js": "/static/js/main.ee690ebd.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Sourav-Bandyopadhyay-Resume.pdf": "/static/media/Sourav-Bandyopadhyay-Resume.7411d57f97bab5407ef1.pdf",
     "static/media/img.jpeg": "/static/media/img.20c22ae99f6ec249215d.jpeg",
     "index.html": "/index.html",
-    "main.a802d119.css.map": "/static/css/main.a802d119.css.map",
-    "main.6742902b.js.map": "/static/js/main.6742902b.js.map",
+    "main.827901d0.css.map": "/static/css/main.827901d0.css.map",
+    "main.ee690ebd.js.map": "/static/js/main.ee690ebd.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a802d119.css",
-    "static/js/main.6742902b.js"
+    "static/css/main.827901d0.css",
+    "static/js/main.ee690ebd.js"
   ]
 }
