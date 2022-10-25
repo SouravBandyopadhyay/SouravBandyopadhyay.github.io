@@ -39,7 +39,7 @@ const ProjectComponent = ({
               target="_blank"
               rel="noopener noreferrer"
               className="project-link-github"
-              style={{ textDecoration: "none", color: "white" }}
+              style={{ textDecoration: "none", color: "white", backgroundColor: "transparent", }}
             >
               <FaGithub size="3rem" />
             </a>

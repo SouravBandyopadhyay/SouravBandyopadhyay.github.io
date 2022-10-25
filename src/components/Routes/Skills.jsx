@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   SiNpm,
   SiHtml5,
@@ -8,11 +8,13 @@ import {
   SiNodedotjs,
   SiPostman,
   SiMongodb,
+  SiRedux,
 } from "react-icons/si";
 const Skills = () => {
   return (
-    <div><h3>Skills</h3>
-    <div className="what-i-do-parent">
+    <div>
+      <h3>Skills</h3>
+      <div className="what-i-do-parent">
         <div className="what-i-do-box">
           <h2
             style={{
@@ -88,40 +90,44 @@ const Skills = () => {
             </ul>
             {/* Packages icon div Start from here */}
             <div className="what-i-do-pacakages">
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiNpm size="3rem" />
                 <p>npm</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiHtml5 size="3rem" />
                 <p>html-5</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiCss3 size="3rem" />
                 <p>css3</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiJavascript size="3rem" />
                 <p>JavaScript</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiReact size="3rem" />
                 <p>React JS</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiNodedotjs size="3rem" />
                 <p>NodeJS</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiPostman size="3rem" />
                 <p>Postman</p>
               </div>
-              <div>
+              <div style={{ padding: "0.25rem" }}>
                 <SiMongodb size="3rem" />
                 <p>Mongodb</p>
               </div>
+              <div style={{ padding: "0.25rem" }}>
+                <SiRedux size="3rem" />
+                <p>Redux</p>
+              </div>
             </div>
-             {/* Packages icon div End from here */}
+            {/* Packages icon div End from here */}
           </div>
         </div>
         <div className="what-i-do-illustration">
@@ -129,7 +135,7 @@ const Skills = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

@@ -53,7 +53,10 @@
 }
 .what-i-do-pacakages {
   width: 100%;
+  border: 1px solid red;
   margin: 1rem 0 1rem 0;
+ display: grid;
+ grid-template-columns: 1fr; 
 
   /* can be flex */
   display: flex;
