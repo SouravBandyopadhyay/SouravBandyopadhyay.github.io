@@ -1,7 +1,6 @@
 import React from "react";
 import "../comp_styles/projectcomponent.css";
 import {
-  SiGithub,
   SiNetlify,
   SiJavascript,
   SiReact,
@@ -23,7 +22,7 @@ const ProjectComponent = ({
     <div>
       <div className="project-card-component">
         <div className="project-card-component-box">
-          <h2>{name}</h2>
+          <p style={{fontSize:"1.5rem",fontWeight:"700",textDecoration:"underline",letterSpacing:"1.1px"}} >{name}</p>
           <div
             style={{
               // border: "1px solid red",
@@ -48,7 +47,7 @@ const ProjectComponent = ({
               target="_blank"
               rel="noopener noreferrer"
               className="project-link-github"
-              style={{ textDecoration: "none", color: "white" }}
+              style={{ textDecoration: "none", color: "white",backgroundColor: "transparent" }}
             >
               <SiNetlify size="3rem" />
             </a>

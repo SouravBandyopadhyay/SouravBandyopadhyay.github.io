@@ -8,36 +8,22 @@ const Contact = () => {
   return (
     <div>
       <h1>Contact Me</h1>
-      <div
-        style={{
-          border: "4px solid red",
-          display: "grid",
-          gridTemplateColumns: "0.5fr 1.5fr",
-        }}
-      >
-        <div>
+      <div className="contact-resume-parent-box">
+        <div style={{ width: "100%" }}>
           <Contact_Illust />
         </div>
         <div>
-          <div>
-            <h2>
+          <div className="p-queries" style={{ width: "70%", fontSize: "2rem" }}>
+            <p>
               Do you have any queries ? Reach out and let's work together on
               something exciting.
-            </h2>
+            </p>
             <span>
               <FaHandshake size="3rem" />
             </span>
           </div>
-          <div
-            style={{
-              display: "flex",
-              gap: "1rem",
-              margin: "auto",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <span style={{ fontSize: "2rem" }}>Connect with on</span>
+          <div className="connect-resume-div-box" >
+            <span style={{ fontSize: "2rem" }}>Connect with me on</span>
             <span>
               <a
                 href="https://www.linkedin.com/in/souravbandyopadhyay/"
@@ -75,7 +61,7 @@ const Contact = () => {
               </a>
             </span>
           </div>
-          <div>
+          <div className="contact-details-2nd-half">
             <span style={{ display: "flex" }}>
               <FaPhoneAlt size="2.5rem" />
               <p style={{ fontSize: "1.6rem" }}>
@@ -89,6 +75,17 @@ const Contact = () => {
                 &nbsp;&nbsp; Gurugram Haryana,India
               </p>
             </span>
+          </div>
+          <div className="resume-btn-drive-link" style={{marginTop:"2rem"}} >
+            <a
+              href="https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button class="button-27" role="button">
+                Resume
+              </button>
+            </a>
           </div>
         </div>
       </div>

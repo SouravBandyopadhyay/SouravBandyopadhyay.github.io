@@ -87,7 +87,7 @@ const Project = () => {
           margin: "auto",
           justifyContent: "center",
           gap: "2rem",
-          border: "4px solid yellow",
+          // border: "4px solid yellow",
           marginTop: "1rem",
         }}
       >
