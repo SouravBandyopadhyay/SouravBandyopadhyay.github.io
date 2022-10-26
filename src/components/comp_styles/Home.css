@@ -16,7 +16,7 @@
   font-size: 1.5rem;
 }
 .homepage-resume-btn {
-  display: inline-block;
+  /* display: inline-block;
   background: #4e9caf;
   padding: 10px;
   text-align: center;
@@ -25,17 +25,54 @@
   font-weight: bold;
   line-height: 25px;
   font-size: 1.2rem;
-  text-decoration: none;
+  text-decoration: none; */
+  appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 0.9rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* width: 20%; */
+    will-change: transform;
 }
 
-.homepage-resume-btn:hover {
-  background: #a348e0;
-  background-image: -webkit-linear-gradient(top, #a348e0, #7cbce6);
-  background-image: -moz-linear-gradient(top, #a348e0, #7cbce6);
-  background-image: -ms-linear-gradient(top, #a348e0, #7cbce6);
-  background-image: -o-linear-gradient(top, #a348e0, #7cbce6);
-  background-image: linear-gradient(to bottom, #a348e0, #7cbce6);
-  text-decoration: none;
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.my-image-portfolio {
+  width: 100%;
+  height: auto;
+  padding: 1.2rem;
+  margin: auto;
+  object-fit: contain;
 }
 
 /* Skills Page */
@@ -55,8 +92,8 @@
   width: 100%;
   border: 1px solid red;
   margin: 1rem 0 1rem 0;
- display: grid;
- grid-template-columns: 1fr; 
+  display: grid;
+  grid-template-columns: 1fr;
 
   /* can be flex */
   display: flex;
@@ -93,10 +130,46 @@
   }
 }
 
-/* home Page media-query */
-@media (max-width: 906px) {
+/* Large desktop screen */
+@media (min-width: 970px) and (max-width: 1024px) {
+  .homePage-main-picture{
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 969px) {
+  p {
+    font-size: 100%;
+  }
   .homepage-parent-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+  }
+  .homePage-main-picture{
+    margin: auto;
+    width: 100%;
+    /* margin-top: -2rem; */
+  }
+}
+/* small-screen-laptops */
+@media (min-width: 480px) and (max-width: 769px) {
+  p {
+    font-size: 98%;
+  }
+  .homePage-main-picture{
+    margin: auto;
+    width: 100%;
+  }
+}
+/* /Mobile devices */
+@media (min-width: 320px) and (max-width: 479px) {
+  p {
+    font-size: 60%;
+  }
+  .homePage-main-picture{
+    margin: auto;
+    width: 100%;
   }
 }

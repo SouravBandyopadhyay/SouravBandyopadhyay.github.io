@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "lottie-web";
 import { useRef, useEffect } from "react";
-const Contact_Illust = () => {
+const Contact_illust = () => {
   const container = useRef(null);
   useEffect(() => {
     Lottie.loadAnimation({
@@ -23,4 +23,4 @@ const Contact_Illust = () => {
   );
 };
 
-export default Contact_Illust;
+export default Contact_illust;

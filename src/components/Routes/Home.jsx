@@ -43,21 +43,22 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="homePage-main-picture" style={{ overflow: "hidden" }}>
-        <img
+      <div className="homePage-main-picture" style={{ overflow: "hidden"}}>
+        <img className="my-image-portfolio"
           src={image}
           alt="Sourav Bandyopadhyay"
           srcset=""
-          style={{
-            width: "100%",
-            height: "auto",
-            padding: "1.2rem",
-            margin: "auto",
-            objectFit: "contain",
-          }}
+          // style={{
+          //   width: "100%",
+          //   height: "auto",
+          //   padding: "1.2rem",
+          //   margin: "auto",
+          //   objectFit: "contain",
+          // }}
         />
       </div>
     </div>
   );
 };
 export default Home;
+

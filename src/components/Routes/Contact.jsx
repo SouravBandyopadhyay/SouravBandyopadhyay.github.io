@@ -1,6 +1,6 @@
 import React from "react";
 import "../comp_styles/contact.css";
-import Contact_Illust from "./contact_illust";
+import Contact_illust from "./contact_illust";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaHandshake, FaPhoneAlt, FaHome } from "react-icons/fa";
@@ -10,7 +10,7 @@ const Contact = () => {
       <h1>Contact Me</h1>
       <div className="contact-resume-parent-box">
         <div style={{ width: "100%" }}>
-          <Contact_Illust />
+          <Contact_illust />
         </div>
         <div>
           <div className="p-queries" style={{ width: "70%", fontSize: "2rem" }}>

@@ -44,16 +44,20 @@ a:hover {
 #check {
   display: none;
 }
-@media (max-width: 980px) {
+
+/* large screen all button should be visible */
+@media (min-width:969px) and (max-width: 1024px) {
   label.logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-left: 3rem;
   }
   nav ul li a {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }
-@media (max-width: 906px) {
+
+@media (min-width:770px) and  (max-width: 969px) {
   .checkbtn {
     display: block;
   }
@@ -73,7 +77,8 @@ a:hover {
     line-height: 1.8rem;
   }
   nav ul li a {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
   a:hover,
   a.active {
@@ -84,4 +89,70 @@ a:hover {
     left: 0;
   }
 }
+/* small-screen-laptops */
+@media (min-width:480px)  and (max-width:770px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1d2935;
+    top: 5rem;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
 
+  nav ul li {
+    display: block;
+    margin: 2rem 0;
+    line-height: 1.5rem;
+  }
+  nav ul li a {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+/* /Mobile devices */
+@media (min-width:320px) and (max-width:479px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1d2935;
+    top: 5rem;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 1.5rem 0;
+    line-height: 2rem;
+  }
+  nav ul li a {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}

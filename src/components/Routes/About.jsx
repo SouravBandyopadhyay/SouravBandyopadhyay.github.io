@@ -8,7 +8,7 @@ const About = () => {
         <h1>About Sourav</h1>
         <p className="about-me-desc-p">
           <span>
-            I'm a{" "}
+            I'm a
             <strong>
               {" "}
               <i>Web Developer</i>{" "}
@@ -47,8 +47,8 @@ const About = () => {
           </span>
         </p>
       </div>
-      <div>
-        <Illust />
+      <div className="illust-box-about" style={{zIndex:"-1"}} >
+        <Illust/>
       </div>
     </div>
   );
