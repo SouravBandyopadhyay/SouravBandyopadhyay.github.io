@@ -1,36 +1,54 @@
 import React from "react";
 import "../comp_styles/contact.css";
-import Contact_illust from "./contact_illust";
+import Contactillust from "./Contactillust";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaHandshake, FaPhoneAlt, FaHome } from "react-icons/fa";
 const Contact = () => {
   return (
     <div>
-      <h1>Contact Me</h1>
+      <div
+        style={{
+          textAlign: "right",
+          margin: "auto",
+          // border: "3px solid red",
+          width: "30%"
+        }}
+      >
+        <h1>Contact Me</h1>
+      </div>
       <div className="contact-resume-parent-box">
         <div style={{ width: "100%" }}>
-          <Contact_illust />
+          <Contactillust />
         </div>
         <div>
-          <div className="p-queries" style={{ width: "70%", fontSize: "2rem" }}>
+          <div
+            className="p-queries"
+            style={{
+              width: "50%",
+              fontSize: "1.5rem",
+              // border: "2px solid green",
+              margin: "auto",
+              padding: "0.5rem"
+            }}
+          >
             <p>
-              Do you have any queries ? Reach out and let's work together on
+              Do you have any queries ? Reach me out and let's work together on
               something exciting.
             </p>
             <span>
               <FaHandshake size="3rem" />
             </span>
           </div>
-          <div className="connect-resume-div-box" >
-            <span style={{ fontSize: "2rem" }}>Connect with me on</span>
+          <div className="connect-resume-div-box">
+            <span style={{ fontSize: "1.7rem" }}>Connect with me on</span>
             <span>
               <a
                 href="https://www.linkedin.com/in/souravbandyopadhyay/"
                 style={{
                   textDecoration: "none",
                   backgroundColor: "transparent",
-                  color: "white",
+                  color: "black"
                 }}
               >
                 <FaLinkedin size="3rem" />
@@ -42,7 +60,7 @@ const Contact = () => {
                 style={{
                   textDecoration: "none",
                   backgroundColor: "transparent",
-                  color: "white",
+                  color: "black"
                 }}
               >
                 <FaGithub size="3rem" />
@@ -54,7 +72,7 @@ const Contact = () => {
                 style={{
                   textDecoration: "none",
                   backgroundColor: "transparent",
-                  color: "white",
+                  color: "black"
                 }}
               >
                 <SiGmail size="3rem" />
@@ -76,15 +94,16 @@ const Contact = () => {
               </p>
             </span>
           </div>
-          <div className="resume-btn-drive-link" style={{marginTop:"2rem"}} >
+          <div
+            className="resume-btn-drive-link"
+            style={{ marginTop: "2rem", marginBottom: "2rem" }}
+          >
             <a
               href="https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button class="button-27" role="button">
-                Resume
-              </button>
+              <button className="button-27">Resume</button>
             </a>
           </div>
         </div>

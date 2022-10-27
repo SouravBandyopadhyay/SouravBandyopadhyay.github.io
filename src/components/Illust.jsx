@@ -9,12 +9,16 @@ const Illust = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./illustration/codingboy.json"),
+      animationData: require("./illustration/codingboy.json")
     });
   }, []);
   return (
     <div>
-      <div className="container" ref={container} style={{padding:"1rem"}} ></div>
+      <div
+        className="container"
+        ref={container}
+        style={{ padding: "1rem" }}
+      ></div>
     </div>
   );
 };

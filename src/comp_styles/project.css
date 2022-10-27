@@ -5,6 +5,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  /* border: 5px solid pink; */
+  padding: 1rem;
+  background-color: #f6f6c9;
 }
 .project-cover-pic {
   object-fit: fill;
@@ -25,6 +28,8 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0.2rem;
+  justify-content: space-evenly;
+  padding: 0.5rem;
 }
 
 /* Project Media Query */

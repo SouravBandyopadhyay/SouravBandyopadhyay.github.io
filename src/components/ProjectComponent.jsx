@@ -6,7 +6,7 @@ import {
   SiReact,
   SiHtml5,
   SiCss3,
-  SiNpm,
+  SiNpm
 } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FcApproval } from "react-icons/fc";
@@ -16,21 +16,30 @@ const ProjectComponent = ({
   deployed_link,
   img_link,
   desc,
-  funct,
+  funct
 }) => {
   return (
     <div>
       <div className="project-card-component">
         <div className="project-card-component-box">
-          <p style={{fontSize:"1.5rem",fontWeight:"700",textDecoration:"underline",letterSpacing:"1.1px"}} >{name}</p>
+          <p
+            style={{
+              fontSize: "1.7rem",
+              fontWeight: "600",
+              letterSpacing: "1.1px"
+            }}
+          >
+            {name}
+          </p>
           <div
             style={{
               // border: "1px solid red",
+              width: "60%",
               textDecoration: "none",
               display: "flex",
-              gap: "1rem",
               margin: "auto",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
+              padding: "0.5rem"
             }}
           >
             <a
@@ -38,7 +47,11 @@ const ProjectComponent = ({
               target="_blank"
               rel="noopener noreferrer"
               className="project-link-github"
-              style={{ textDecoration: "none", color: "white", backgroundColor: "transparent", }}
+              style={{
+                textDecoration: "none",
+                color: "black",
+                backgroundColor: "transparent"
+              }}
             >
               <FaGithub size="3rem" />
             </a>
@@ -47,7 +60,11 @@ const ProjectComponent = ({
               target="_blank"
               rel="noopener noreferrer"
               className="project-link-github"
-              style={{ textDecoration: "none", color: "white",backgroundColor: "transparent" }}
+              style={{
+                textDecoration: "none",
+                color: "black",
+                backgroundColor: "transparent"
+              }}
             >
               <SiNetlify size="3rem" />
             </a>
@@ -62,7 +79,7 @@ const ProjectComponent = ({
               height: "250px",
               marginTop: "0.5rem",
               marginBottom: "0.25rem",
-              padding: "0.5rem",
+              padding: "0.5rem"
             }}
           />
           <div className="tech-stacks-project-component">
@@ -74,17 +91,33 @@ const ProjectComponent = ({
               fontSize: "1.1rem",
               fontWeight: "400",
               letterSpacing: "1.1px",
-              textAlign:"left"
+              textAlign: "left",
+              padding: "0.5rem"
             }}
           >
             {desc}
           </p>
-          <div style={{margin:"auto",marginTop:"2rem",padding:"0.5rem"}} >
-            <h2 style={{justifyContent:"center",textAlign:"center"}} >Features included</h2>
-            <ul>
-            {funct.map((el) => (
-              <li style={{fontSize:"1.2rem",textDecoration:"none",letterSpacing:"1.1px",fontWeight:"500",textAlign:"left"}} ><FcApproval/> {el}</li>
-            ))}
+          <div style={{ margin: "auto", marginTop: "2rem", padding: "0.5rem" }}>
+            <h2 style={{ justifyContent: "center", textAlign: "center" }}>
+              Features included
+            </h2>
+            <ul style={{ display: "grid", marginTop: "1rem" }}>
+              {funct.map((el, index) => (
+                <li
+                  key={index}
+                  style={{
+                    fontSize: "1.2rem",
+                    textDecoration: "none",
+                    letterSpacing: "1px",
+                    fontWeight: "500",
+                    textAlign: "left"
+                    // padding: "0.25rem"
+                    // border: "2px solid orange"
+                  }}
+                >
+                  <FcApproval /> {el}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

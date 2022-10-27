@@ -116,4 +116,26 @@
         </div>
       </div>
 
-      
+section container in app.js
+ <section>
+        {/* <AllRoutes /> */}
+        {/* Allroutes component changes */}
+        <section id="intro">
+          {" "}
+          <Home />
+        </section>
+        <section id="about_me">
+          {" "}
+          <About />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="project">
+          {" "}
+          <Project />{" "}
+        </section>
+        {/* <section id="contact&resume">
+          <Contact />
+        </section> */}
+      </section>

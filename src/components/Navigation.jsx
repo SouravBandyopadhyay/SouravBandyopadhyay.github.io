@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import "../comp_styles/nav2.css";
 const Navigation = () => {
@@ -10,30 +10,30 @@ const Navigation = () => {
         <label for="check" class="checkbtn">
           <FaBars id="checkbtn" />
         </label>
-        <label class="logo"> PORTFOLIO </label>
+        <label className="logo"> PORTFOLIO </label>
         <ul>
           <li>
-            <Link to="/" className="active">
+            <Link activeClass="active" className="active" smooth spy to="intro" >
             Portfolio
             </Link>
           </li>
           <li>
-            <Link className="active" to="/about">
+            <Link activeClass="active"  className="active"  smooth spy to="about_me" >
               About Me
             </Link>
           </li>
           <li>
-            <Link className="active" to="/skills">
+            <Link  activeClass="active" className="active"  smooth spy to="skills" >
               Skills
             </Link>
           </li>
           <li>
-            <Link className="active" to="/project">
+            <Link activeClass="active" className="active"  smooth spy to="project" >
               Project
             </Link>
           </li>
           <li>
-            <Link className="active" to="/contact">
+            <Link activeClass="active" className="active"  smooth spy to="contact&resume" >
               Contact & Resume
             </Link>
           </li>
