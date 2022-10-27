@@ -24,13 +24,14 @@ const About = () => {
             </strong>{" "}
             section.
           </p>
+          <br />
           <p>
             I did my Bachelors in Mechanical Engineering . After college I was
             working with Globsyn AI Workspace as a Technical Apprentice from
             there I develop a keen inclination towards coding. My interests are
             reading articles and manga comics.
           </p>
-
+          <br />
           <p>
             I'm open to Job opportunities where I can contribute, learn and
             grow. If you have a good opportunity that matches my skills and

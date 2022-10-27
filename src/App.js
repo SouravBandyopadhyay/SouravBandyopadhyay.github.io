@@ -11,7 +11,8 @@ export default function App() {
     <div className="App">
       <header className="nav">
         <div>
-          <Link activeClass="active" smooth spy to="home">
+          <Link activeClass="active"  smooth={true}
+                  offset={-100} spy to="home">
             Sourav Bandyopadhyay
           </Link>
         </div>
@@ -19,23 +20,27 @@ export default function App() {
           <nav className="nav__container__actions">
             <ul>
               <li>
-                <Link activeClass="active" smooth spy to="about">
+                <Link activeClass="active"  smooth={true}
+                  offset={-100} spy to="about">
                   ABOUT
                 </Link>
               </li>
               <li>
-                <Link activeClass="active" smooth spy to="skills">
+                <Link activeClass="active"  smooth={true}
+                  offset={-100} spy to="skills">
                   SKILLS
                 </Link>
               </li>
               <li>
-                <Link activeClass="active" smooth spy to="projects">
+                <Link activeClass="active"  smooth={true}
+                  offset={-100} spy to="projects">
                   PROJECTS
                 </Link>
               </li>
 
               <li>
-                <Link activeClass="active" smooth spy to="contact">
+                <Link activeClass="active"  smooth={true}
+                  offset={-100} spy to="contact">
                   CONTACT ME
                 </Link>
               </li>
@@ -47,17 +52,25 @@ export default function App() {
         <Home />
       </section>
       <hr />
+      <br />
+      <hr />
       <section id="about">
         <About />
       </section>
+      <hr />
+      <br />
       <hr />
       <section id="skills">
         <Skills />
       </section>
       <hr />
+      <br />
+      <hr />
       <section id="projects">
         <Project />
       </section>
+      <hr />
+      <br />
       <hr />
       <section id="contact">
         <Contact />
