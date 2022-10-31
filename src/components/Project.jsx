@@ -1,8 +1,7 @@
 import React from "react";
-import "../comp_styles/project.css";
 import ProjectComponent from "./ProjectComponent";
-import GitHubCalendar from "react-github-calendar";
-
+import { Box, SimpleGrid, Heading } from "@chakra-ui/react";
+import Githubstats from "./Githubstats";
 const Project = () => {
   const listProjects = [
     {
@@ -15,7 +14,7 @@ const Project = () => {
       desc:
         "This is a robust, fully featured React App . This Single Page github app allows the visitor to search for github users.",
       funct: [
-        "Display the Searched Profile and Trending Profile",
+        "Display Searched Profile and Trending Profile",
         "Show Date and time",
         "Conditional Rendering"
       ]
@@ -68,63 +67,42 @@ const Project = () => {
     }
   ];
   return (
-    <div>
-      {/* <h1>PROJECT</h1> */}
-      <div className="map-project-div">
-        {listProjects.map((project) => (
-          <ProjectComponent
-            key={project.id}
-            name={project.name}
-            github_link={project.github_link}
-            deployed_link={project.deployed_link}
-            img_link={project.img_link}
-            desc={project.desc}
-            funct={project.funct}
-          />
-        ))}
-      </div>
-      <div
-        className="github-stats-div"
-        style={{
-          width: "100%",
-          display: "inline-grid",
-          margin: "auto",
-          justifyContent: "center",
-          gap: "2rem",
-          // border: "4px solid yellow",
-          marginTop: "1rem"
-        }}
+    <>
+      <Heading
+        as="h1"
+        fontSize={{ base: "24px", md: "30px", lg: "36px" }}
+        mb={3}
       >
-        <h2>Github Statistics</h2>
-        <div style={{ margin: "auto" }}>
-          <GitHubCalendar
-            username="SouravBandyopadhyay"
-            blockMargin={6}
-            blockSize={15}
-            fontSize={16}
-            margin
-          />
-        </div>
-
-        <div style={{ display: "flex", gap: "0.5rem", padding: "0.5rem" }}>
-          <img
-            align="left"
-            src="https://github-readme-stats.vercel.app/api/top-langs?username=souravbandyopadhyay&show_icons=true&locale=en&layout=compact&theme=algolia"
-            alt="souravbandyopadhyay"
-          />
-          <img
-            align="center"
-            src="https://github-readme-stats.vercel.app/api?username=souravbandyopadhyay&show_icons=true&locale=en&theme=algolia"
-            alt="souravbandyopadhyay"
-          />
-          <img
-            align="center"
-            src="https://github-readme-streak-stats.herokuapp.com/?user=souravbandyopadhyay&theme=algolia"
-            alt="souravbandyopadhyay"
-          />
-        </div>
-      </div>
-    </div>
+        Project
+      </Heading>
+      <Box w="100%" p={5}>
+        <SimpleGrid
+          // columns={2}
+          spacing={10}
+          templateColumns={[
+            "1fr",
+            "repeat(1,1fr)",
+            "repeat(1, 1fr)",
+            "repeat(2, 1fr)"
+          ]}
+          gap={[2, 2, 3, 3]}
+        >
+          {listProjects.map((el) => (
+            <ProjectComponent
+              key={el.id}
+              name={el.name}
+              github_link={el.github_link}
+              deployed_link={el.deployed_link}
+              img_link={el.img_link}
+              desc={el.desc}
+              funct={el.funct}
+            />
+          ))}
+        </SimpleGrid>
+      </Box>
+      {/* Github Statistics */}
+      <Githubstats />
+    </>
   );
 };
 

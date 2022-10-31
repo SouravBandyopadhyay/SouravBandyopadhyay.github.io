@@ -9,7 +9,7 @@ const Contact_illust = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./illustration/contact.json")
+      animationData: require("../illustration/contact.json"),
     });
   }, []);
   return (

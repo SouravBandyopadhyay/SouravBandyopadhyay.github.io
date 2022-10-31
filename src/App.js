@@ -1,77 +1,31 @@
+import { Divider } from "@chakra-ui/react";
 import "./App.css";
-import { Link } from "react-scroll";
-import About from "./components/About.jsx";
-import Home from "./components/Home";
-import Skills from "./components/Skills";
-import Project from "./components/Project";
+import About from "./components/About";
 import Contact from "./components/Contact";
-
+import Home from "./components/Home";
+import Project from "./components/Project";
+import Skills from "./components/Skills";
+import Nav from "./Nav";
 export default function App() {
   return (
     <div className="App">
-      <header className="nav">
-        <div>
-          <Link activeClass="active"  smooth={true}
-                  offset={-100} spy to="home">
-            Sourav Bandyopadhyay
-          </Link>
-        </div>
-        <div>
-          <nav className="nav__container__actions">
-            <ul>
-              <li>
-                <Link activeClass="active"  smooth={true}
-                  offset={-100} spy to="about">
-                  ABOUT
-                </Link>
-              </li>
-              <li>
-                <Link activeClass="active"  smooth={true}
-                  offset={-100} spy to="skills">
-                  SKILLS
-                </Link>
-              </li>
-              <li>
-                <Link activeClass="active"  smooth={true}
-                  offset={-100} spy to="projects">
-                  PROJECTS
-                </Link>
-              </li>
-
-              <li>
-                <Link activeClass="active"  smooth={true}
-                  offset={-100} spy to="contact">
-                  CONTACT ME
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <section id="home">
-        <Home />
-      </section>
-      <hr />
-      <br />
-      <hr />
+      <div className="nav">
+        <Nav />
+      </div>
+      <Home />
+      <Divider my={7} />
       <section id="about">
         <About />
       </section>
-      <hr />
-      <br />
-      <hr />
-      <section id="skills">
+      <Divider my={7} />
+      <section id="tech">
         <Skills />
       </section>
-      <hr />
-      <br />
-      <hr />
+      <Divider my={7} />
       <section id="projects">
         <Project />
       </section>
-      <hr />
-      <br />
-      <hr />
+      <Divider my={7} />
       <section id="contact">
         <Contact />
       </section>
