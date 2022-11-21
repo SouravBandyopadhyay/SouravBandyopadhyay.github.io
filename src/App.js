@@ -1,4 +1,4 @@
-import { Divider } from "@chakra-ui/react";
+
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -13,19 +13,19 @@ export default function App() {
         <Nav />
       </div>
       <Home />
-      <Divider my={7} />
+      <br/>
       <section id="about">
         <About />
       </section>
-      <Divider my={7} />
+      <br/>
       <section id="tech">
         <Skills />
       </section>
-      <Divider my={7} />
+      <br/>
       <section id="projects">
         <Project />
       </section>
-      <Divider my={7} />
+      <br/>
       <section id="contact">
         <Contact />
       </section>

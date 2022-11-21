@@ -33,8 +33,15 @@ const ProjectComponent = ({
 }) => {
   return (
     <>
-      <Box h="-moz-max-content" w="100%">
-        <Grid templateColumns="repeat(5, 1fr)" gap={1}>
+      <Box
+        h="-moz-max-content"
+        w="100%"
+        border="5px solid white"
+        p="3"
+        _hover={{ transform: "translateY(-5px)" }}
+        borderRadius="md"
+      >
+        <Grid templateColumns="repeat(5, 1fr)" gap={3}>
           <GridItem colStart={1} colEnd={6}>
             <Heading
               as="h2"
@@ -42,16 +49,17 @@ const ProjectComponent = ({
               p={4}
               fontWeight="600"
               fontSize={["22px", "28px", "34px"]}
+              textDecoration="underline"
             >
-              {name}
+              <strong> {name}</strong>
             </Heading>
           </GridItem>
           <GridItem
             colSpan={1}
             // h="-moz-max-content"
             display="inline-grid"
-            justifyContent="space-around"
-            gap={2}
+            justifyContent="center"
+            gap={4}
             // border="4px solid red"
             alignItems="center"
           >
@@ -65,7 +73,12 @@ const ProjectComponent = ({
           <GridItem colStart={2} colEnd={6}>
             {/* Picture related to project */}
             <AspectRatio ratio={2 / 1}>
-              <Image w="100%" boxSize="250px" p={2} src={img_link} />
+              <Image
+                w="100%"
+                boxSize="250px"
+                borderRadius="lg"
+                src={img_link}
+              />
             </AspectRatio>
           </GridItem>
           <GridItem colStart={1} colEnd={6}>
@@ -111,11 +124,12 @@ const ProjectComponent = ({
               Stacks Used
             </Heading>
             <Box
-              display="grid"
+              display="inline-grid"
               gridTemplateColumns={["1fr", "1fr 1fr", "1fr 1fr 1fr"]}
-              gap={[2, 2, 3, 3]}
-              justifyContent="center"
+              gap={[3, 3, 5, 5]}
               margin="auto"
+              justifyContent="space-around"
+              // border="2px solid red"
             >
               <SiJavascript size="2.5rem" /> <SiReact size="2.5rem" />
               <SiHtml5 size="2.5rem" /> <SiCss3 size="2.5rem" />

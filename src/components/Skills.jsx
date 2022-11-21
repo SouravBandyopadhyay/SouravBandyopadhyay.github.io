@@ -6,6 +6,7 @@ import {
   ListIcon,
   Box,
   Heading,
+  Text,
 } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import {
@@ -19,6 +20,11 @@ import {
   SiMongodb,
   SiRedux,
   SiTypescript,
+  SiBootstrap,
+  SiExpress,
+  SiChakraui,
+  SiGithub,
+  SiGit,
 } from "react-icons/si";
 const Skills = () => {
   return (
@@ -39,7 +45,7 @@ const Skills = () => {
           gap="1rem"
           justifyContent="space-evenly"
         >
-          <Box w="38%" p={2} margin="auto">
+          <Box w="90%" p={2} margin="auto">
             <Grid
               p={2}
               templateColumns={[
@@ -50,50 +56,191 @@ const Skills = () => {
               ]}
               gap={[2, 2, 3, 3]}
             >
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiNpm size="3rem" />
-                <p>npm</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+                // border="2px solid red"
+              >
+                <SiNpm size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  NPM
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiCss3 size="3rem" />
-                <p>css3</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiCss3 size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  CSS
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiJavascript size="3rem" />
-                <p>JavaScript</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiJavascript size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  JavaScript
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiReact size="3rem" />
-                <p>ReactJS</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiGit size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Git
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiPostman size="3rem" />
-                <p>Postman</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiReact size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  ReactJS
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiMongodb size="3rem" />
-                <p>Mongodb</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiPostman size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Postman
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiRedux size="3rem" />
-                <p>Redux</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiMongodb size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Mongodb
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiTypescript size="3rem" />
-                <p>Typescript</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiChakraui size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Chakraui
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiHtml5 size="3rem" />
-                <p>html-5</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiGithub size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Github
+                </Text>
               </GridItem>
-              <GridItem w="100%" display="inline-flex" gap={4} p={1}>
-                <SiNodedotjs size="3rem" />
-                <p>NodeJS</p>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiExpress size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Express
+                </Text>
+              </GridItem>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiBootstrap size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Bootstrap
+                </Text>
+              </GridItem>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiRedux size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Redux
+                </Text>
+              </GridItem>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiTypescript size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  Typescript
+                </Text>
+              </GridItem>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiHtml5 size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  HTML
+                </Text>
+              </GridItem>
+              <GridItem
+                w="100%"
+                display="inline-flex"
+                gap={4}
+                p={1}
+                _hover={{ transform: "translateY(-5px)" }}
+              >
+                <SiNodedotjs size="5rem" />
+                <Text fontSize="3xl" margin="auto">
+                  NodeJS
+                </Text>
               </GridItem>
             </Grid>
           </Box>
 
-          <Box w="58%" p={2}>
+          {/* <Box w="58%" p={2}>
             <Heading
               as="h2"
               fontSize={{ base: "18px", md: "24px", lg: "28px" }}
@@ -132,7 +279,7 @@ const Skills = () => {
                 and effectiveness as per emerging technologies.
               </ListItem>
             </List>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </>

@@ -27,7 +27,10 @@ const Nav = () => {
             <Flex w="100%" align="center" justify="flex-end" p={4}>
               <HStack as="nav" spacing="5">
                 <Link activeClass="active" smooth spy to="about" offset={-100}>
-                  <i>ABOUT</i>
+                  <strong>
+                    {" "}
+                    <i>ABOUT</i>
+                  </strong>
                 </Link>
                 <Link
                   activeClass="active"
@@ -37,7 +40,9 @@ const Nav = () => {
                   duration={300}
                   offset={-100}
                 >
-                  <i>TECH</i>
+                  <strong>
+                    <i>TECH</i>
+                  </strong>
                 </Link>
                 <Link
                   activeClass="active"
@@ -47,7 +52,9 @@ const Nav = () => {
                   duration={600}
                   offset={-100}
                 >
-                  <i>PROJECTS</i>
+                  <strong>
+                    <i>PROJECTS</i>
+                  </strong>
                 </Link>
 
                 <Link
@@ -58,7 +65,10 @@ const Nav = () => {
                   duration={1000}
                   offset={-100}
                 >
-                  <i> CONTACT ME</i>
+                  <strong>
+                    {" "}
+                    <i> CONTACT ME</i>
+                  </strong>
                 </Link>
               </HStack>
             </Flex>

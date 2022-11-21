@@ -1,8 +1,12 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  background-color: #06283d;
+  background-color: #182747;
+  /* color combo =  06283d*/
   color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .nav {
   position: -webkit-sticky;
@@ -12,7 +16,7 @@
   height: max-content;
   min-height: 60px;
   cursor: pointer;
-  background-color: #256d85;
+  background-color: #435681;
   color: white;
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 }

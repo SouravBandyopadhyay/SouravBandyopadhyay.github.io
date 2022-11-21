@@ -39,7 +39,7 @@ const MobileDrawer = () => {
                 spy
                 to="about"
               >
-                About
+                ABOUT
               </Link>
               <Link
                 activeClass="active"

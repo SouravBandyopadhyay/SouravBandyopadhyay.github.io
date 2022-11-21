@@ -16,6 +16,7 @@ import {
   Button,
   ButtonGroup,
   Heading,
+  Hide,
 } from "@chakra-ui/react";
 
 const Contact = () => {
@@ -27,9 +28,12 @@ const Contact = () => {
           // templateRows={["1fr", "1fr"]}
           gap={[2, 2, 3, 3]}
         >
-          <GridItem w="100">
-            <Contactillust />
-          </GridItem>
+          <Hide below="md" margin="auto">
+            <GridItem w="100">
+              <Contactillust />
+            </GridItem>
+          </Hide>
+
           <GridItem>
             <Text
               textAlign="center"
@@ -118,7 +122,7 @@ const Contact = () => {
                 justifyContent="center"
                 display="flex"
               >
-                <ButtonGroup variant="outline" spacing="6">
+                <ButtonGroup variant="outline" spacing="6" marginTop={5}>
                   <Link
                     href="https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view?usp=sharing"
                     isExternal
@@ -136,7 +140,7 @@ const Contact = () => {
             </Box>
           </GridItem>
         </SimpleGrid>
-        <Box>
+        <Box p={4}>
           <Text fontSize={{ base: "18px", md: "24px", lg: "30px" }}>
             Created by Sourav Bandyopadhyay with{" "}
             <span role="img" aria-label="heart">

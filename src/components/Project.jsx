@@ -27,7 +27,7 @@ const Project = () => {
       img_link:
         "https://i.postimg.cc/52gr1sMv/Web-capture-22-10-2022-164712-silver-sfogliatella-0c9664-netlify-app.jpg",
       desc:
-        "MyHours is a cloud-based time tracking solution best suited for small teams and freelancers. Users can start time tracking on unlimited projects and tasks.",
+        "MyHours is a time tracking solution best suited for small teams and freelancers. Users can start time tracking on unlimited projects and tasks.",
       funct: [
         "Time tacking dashboard",
         "Login with user details stored in localstorage",

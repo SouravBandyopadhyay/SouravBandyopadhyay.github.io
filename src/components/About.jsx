@@ -1,4 +1,4 @@
-import {Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Hide } from "@chakra-ui/react";
 import Illust from "./Illust";
 const About = () => {
   return (
@@ -28,25 +28,35 @@ const About = () => {
             fontSize={{ base: "1rem", md: "1.3rem", lg: "1.6rem" }}
           >
             <Text textAlign="left">
-              I'm a <strong>Web Developer</strong> from Gurugram, Haryana.
+              I'm a{" "}
+              <strong>
+                <i> Web Developer </i>
+              </strong>
+              from Gurugram, Haryana.
               <br />
               Gone through rigirous and competetive coding cirrculam and learned
               MERN Stack at Masai School. I have done various group as well as
               individual projects in my coding journey.Check out some of my work
-              in the <strong>Project</strong> section.
-              <br />I did my Bachelors in Mechanical Engineering . After college
-              I was working with Globsyn AI Workspace as a Technical Apprentice
-              from there I develop a keen inclination towards coding. My
-              interests are reading articles and manga comics.
+              in the
+              <strong>
+                <i> Project </i>
+              </strong>
+              section.
               <br />
-              I'm open to Job opportunities where I can contribute, learn and
+              I am open to Job opportunities where I can contribute, learn and
               grow. If you have a good opportunity that matches my skills and
-              experience then don't hesitate to <strong>Contact</strong> me.
+              experience then don't hesitate to
+              <strong>
+                <i> Contact </i>
+              </strong>
+              me.
             </Text>
           </Box>
-          <Box w="30%">
-            <Illust />
-          </Box>
+          <Hide below="md">
+            <Box w="30%">
+              <Illust />
+            </Box>
+          </Hide>
         </Box>
       </Box>
     </>

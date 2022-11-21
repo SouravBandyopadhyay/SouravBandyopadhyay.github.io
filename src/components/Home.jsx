@@ -1,12 +1,12 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Hide } from "@chakra-ui/react";
 import {
   Button,
   Link,
   Image,
   AspectRatio,
   ButtonGroup,
-  Text
+  Text,
 } from "@chakra-ui/react";
 
 const Home = () => {
@@ -20,18 +20,23 @@ const Home = () => {
         gap="1.5rem"
         fontSize={{ base: "1rem", md: "1.3rem", lg: "1.6rem" }}
         p={4}
+        margin="auto"
+        justifyContent="space-evenly"
       >
-        <Box w="70%" h="-moz-max-content" justifyContent="center">
+        <Box w="65%" h="-moz-max-content"  justifyContent="center"  >
           <Text
+           w="90%"
             as="h1"
             fontWeight="bold"
+            textAlign="center"
+            margin="auto" marginTop="2"
             p={4}
             fontSize={{ base: "24px", md: "28px", lg: "32px" }}
           >
             Hi I am Sourav Bandyopadhyay
           </Text>
           <Box>
-            <Text w="90%" as="p" p={4} margin="auto" marginTop="10">
+            <Text w="90%" as="p" p={4} margin="auto" marginTop="5"  textAlign="left">
               A passionate Full Stack Web Developer
               <span role="img" aria-label="rocket">
                 🚀
@@ -55,16 +60,18 @@ const Home = () => {
             </Link>
           </ButtonGroup>
         </Box>
-        <Box w="28%" h="-moz-max-content" p="10">
-          <AspectRatio ratio={1}>
-            <Image
-              src="https://i.postimg.cc/tJFg0DSh/img.jpg"
-              alt="naruto"
-              objectFit="cover"
-              borderRadius="full"
-            />
-          </AspectRatio>
-        </Box>
+        <Hide below="sm">
+          <Box w="28%"  h="-moz-max-content" p="8" margin="auto">
+            <AspectRatio ratio={1}>
+              <Image
+                src="https://i.postimg.cc/tJFg0DSh/img.jpg"
+                alt="naruto"
+                objectFit="cover"
+                borderRadius="full"
+              />
+            </AspectRatio>
+          </Box>
+        </Hide>
       </Box>
     </>
   );
