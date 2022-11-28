@@ -2,27 +2,32 @@ import React from "react";
 import Contactillust from "./Contactillust";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { FaHandshake, FaPhoneAlt, FaHome } from "react-icons/fa";
+import { FaPhoneAlt, FaHome } from "react-icons/fa";
 import {
   Box,
   SimpleGrid,
   Text,
-  Grid,
   GridItem,
-  AspectRatio,
-  Image,
   Link,
-  Spacer,
   Button,
   ButtonGroup,
-  Heading,
   Hide,
+  Icon,
 } from "@chakra-ui/react";
 
 const Contact = () => {
   return (
     <>
       <Box w="100%">
+        <Text
+          as="h2"
+          textAlign="center"
+          fontWeight="700"
+          fontSize={{ base: "24px", md: "30px", lg: "34px" }}
+          p={5}
+        >
+          Contact Me
+        </Text>
         <SimpleGrid
           templateColumns={["1fr", "1fr", "0.5fr 1.5fr", "0.5fr 1.5fr"]}
           // templateRows={["1fr", "1fr"]}
@@ -36,8 +41,9 @@ const Contact = () => {
 
           <GridItem>
             <Text
+              as="h2"
               textAlign="center"
-              fontWeight="600"
+              fontWeight="500"
               fontSize={{ base: "18px", md: "28px", lg: "30px" }}
               p={5}
             >
@@ -50,47 +56,41 @@ const Contact = () => {
               display="flex"
               w="70%"
               // border="2px solid red"
-              justifyContent="space-evenly"
+              justifyContent="center"
               margin="auto"
             >
-              <Text
-                textAlign="center"
-                fontWeight="600"
-                fontSize={{ base: "18px", md: "24px", lg: "30px" }}
-                p={2}
-              >
-                Connect with me on :
-              </Text>
-              <SimpleGrid
-                p={2}
-                templateColumns={[
-                  "1fr",
-                  "repeat(1,1fr)",
-                  "repeat(2, 1fr)",
-                  "repeat(3, 1fr)",
-                ]}
-                gap={[1, 1, 2, 3]}
-              >
+              <Box>
+                <Text
+                  textAlign="left"
+                  fontWeight="500"
+                  fontSize={{ base: "18px", md: "24px", lg: "30px" }}
+                  p={2}
+                >
+                  Get in Touch :
+                </Text>
+              </Box>
+
+              <SimpleGrid p={2} templateColumns={"1fr 1fr 1fr"} gap={5}>
                 <Link
                   margin="auto"
                   href="https://github.com/SouravBandyopadhyay"
                   isExternal
                 >
-                  <FaGithub size="3rem" />
+                  <Icon as={FaGithub} boxSize={["2em", "3em"]} />
                 </Link>
                 <Link
                   margin="auto"
                   href="https://www.linkedin.com/in/souravbandyopadhyay/"
                   isExternal
                 >
-                  <FaLinkedin size="3rem" />
+                  <Icon as={FaLinkedin} boxSize={["2em", "3em"]} />
                 </Link>
                 <Link
                   margin="auto"
                   href="mailto:souravb.1998@gmail.com?"
                   isExternal
                 >
-                  <SiGmail size="3rem" />
+                  <Icon as={SiGmail} boxSize={["2em", "3em"]} />
                 </Link>
               </SimpleGrid>
             </Box>
@@ -103,13 +103,13 @@ const Contact = () => {
               p={4}
             >
               <Box display="flex" p={2}>
-                <FaHome size="3rem" />
+                <Icon as={FaHome} boxSize={["2em", "3em"]} />
                 <Text fontSize={{ base: "16px", md: "24px", lg: "28px" }}>
                   &nbsp;&nbsp; Gurugram Haryana,India
                 </Text>
               </Box>
               <Box display="flex" p={2}>
-                <FaPhoneAlt size="2.5rem" />
+                <Icon as={FaPhoneAlt} boxSize={["2em", "3em"]} />
                 <Text fontSize={{ base: "16px", md: "24px", lg: "28px" }}>
                   &nbsp;&nbsp; +91 8240411987 / 9062415895
                 </Text>
