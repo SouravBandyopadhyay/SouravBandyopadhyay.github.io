@@ -29,7 +29,6 @@ const MobileDrawer = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Mobile Menu</DrawerHeader>
           <DrawerBody>
             <VStack>
               <Link

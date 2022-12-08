@@ -4,7 +4,8 @@ import {
   Box,
   Heading,
   Text,
-  Icon
+  Icon,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   SiNpm,
@@ -21,7 +22,7 @@ import {
   SiExpress,
   SiChakraui,
   SiGithub,
-  SiGit
+  SiGit,
 } from "react-icons/si";
 const icons = [
   { id: 1, icon: SiNpm, text: "NPM" },
@@ -38,19 +39,28 @@ const icons = [
   { id: 12, icon: SiExpress, text: "Express" },
   { id: 13, icon: SiChakraui, text: "ChakraUI" },
   { id: 14, icon: SiGithub, text: "Github" },
-  { id: 15, icon: SiGit, text: "Git" }
+  { id: 15, icon: SiGit, text: "Git" },
 ];
 const Skills = () => {
   return (
     <>
       <Box>
-        <Heading
-          as="h1"
-          fontSize={{ base: "24px", md: "30px", lg: "36px" }}
-          mb={3}
-          p={4}
-        >
-          Skills
+        <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} marginTop={2}>
+          <Text
+            as={"span"}
+            position={"relative"}
+            _after={{
+              content: "''",
+              width: "full",
+              height: useBreakpointValue({ base: "20%", md: "25%" }),
+              position: "absolute",
+              bottom: 1,
+              left: 0,
+              zIndex: -1,
+            }}
+          >
+            Skills
+          </Text>
         </Heading>
         <Box
           w="100%"
@@ -66,7 +76,7 @@ const Skills = () => {
                 "1fr",
                 "repeat(2,1fr)",
                 "repeat(2, 1fr)",
-                "repeat(3, 1fr)"
+                "repeat(3, 1fr)",
               ]}
               gap={[2, 2, 3, 3]}
             >
@@ -76,13 +86,14 @@ const Skills = () => {
                   display="inline-flex"
                   gap={4}
                   p={1}
-                  _hover={{ transform: "translateY(-5px)", fontWeight: 700,color: "blue.200" }}
+                  _hover={{
+                    transform: "translateY(-5px)",
+                    fontWeight: 700,
+                    color: "blue.200",
+                  }}
                   key={el.id}
                 >
-                  <Icon
-                    as={el.icon}
-                    boxSize={["3em", "4em", "5em"]}
-                  />
+                  <Icon as={el.icon} boxSize={["3em", "4em", "5em"]} />
                   <Text fontSize={["xl", "2xl", "3xl"]} margin="auto">
                     {el.text}
                   </Text>

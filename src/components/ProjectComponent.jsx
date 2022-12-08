@@ -20,10 +20,15 @@ import {
   ListItem,
   ListIcon,
   Heading,
+  HStack,
+  Stack,
+  OrderedList,
+  VStack,
+  Icon,
 } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 
-const ProjectComponent = ({
+const ProjectComponentlol = ({
   name,
   github_link,
   deployed_link,
@@ -35,7 +40,6 @@ const ProjectComponent = ({
     <>
       <Box
         h="-moz-max-content"
-        w="100%"
         border="5px solid white"
         p="3"
         _hover={{ transform: "translateY(-5px)" }}
@@ -48,28 +52,26 @@ const ProjectComponent = ({
               textAlign="center"
               p={4}
               fontWeight="600"
-              fontSize={["22px", "28px", "34px"]}
+              fontSize={["3xl","4xl","5xl"]}
               textDecoration="underline"
             >
               <strong> {name}</strong>
             </Heading>
           </GridItem>
-          <GridItem
+          <VStack
             colSpan={1}
-            // h="-moz-max-content"
             display="inline-grid"
             justifyContent="center"
             gap={4}
-            // border="4px solid red"
             alignItems="center"
           >
             <Link href={github_link} isExternal>
-              <FaGithub size="3rem" />
+              <Icon as={FaGithub} boxSize={["2em", "3em"]} />
             </Link>
             <Link href={deployed_link} isExternal>
-              <SiNetlify size="3rem" />
+              <Icon as={SiNetlify} boxSize={["2em", "3em"]} />
             </Link>
-          </GridItem>
+          </VStack>
           <GridItem colStart={2} colEnd={6}>
             {/* Picture related to project */}
             <AspectRatio ratio={2 / 1}>
@@ -92,53 +94,38 @@ const ProjectComponent = ({
               {desc}
             </Text>
           </GridItem>
-          <GridItem colSpan={3} p={5}>
-            <Heading
-              as="h3"
-              textAlign="center"
-              p={4}
-              fontWeight="600"
-              fontSize={["sm", "md", "lg", "xl"]}
-            >
-              Highlighted features
-            </Heading>
-            <Text>
-              <List spacing={2}>
-                {funct.map((el, index) => (
-                  <Box key={index} display="flex" textAlign="left">
-                    <ListIcon as={CheckCircleIcon} color="green.500" />
-                    <ListItem> {el} </ListItem>
-                  </Box>
-                ))}
-              </List>
-            </Text>
-          </GridItem>
-          <GridItem colSpan={2}>
-            <Heading
-              as="h3"
-              textAlign="center"
-              p={4}
-              fontWeight="600"
-              fontSize={["sm", "md", "lg", "xl"]}
-            >
-              Stacks Used
-            </Heading>
-            <Box
-              display="inline-grid"
-              gridTemplateColumns={["1fr", "1fr 1fr", "1fr 1fr 1fr"]}
-              gap={[3, 3, 5, 5]}
-              margin="auto"
-              justifyContent="space-around"
-              // border="2px solid red"
-            >
-              <SiJavascript size="2.5rem" /> <SiReact size="2.5rem" />
-              <SiHtml5 size="2.5rem" /> <SiCss3 size="2.5rem" />
-              <SiNpm size="2.5rem" />
-            </Box>
-          </GridItem>
         </Grid>
+        <Stack
+          direction={"column"}
+          spacing={2}
+          textAlign="center"
+          p={2}
+          paddingLeft={50}
+          margin="auto"
+        >
+          <Text  fontSize={["xl", "2xl"]} fontWeight={600} textAlign="center">
+            Functionality
+          </Text>
+          <OrderedList margin="auto">
+            {funct.map((el, index) => (
+              <ListItem key={index} fontSize={["md", "lg"]}>
+                {el}
+              </ListItem>
+            ))}
+          </OrderedList>
+        </Stack>
+        <Box>
+          <Text  fontSize={["xl", "2xl"]} fontWeight={600} textAlign="center">
+            Techstacks
+          </Text>
+          <HStack p={2} gap={4} margin="auto" justifyContent="center">
+            <SiJavascript size="2.5rem" /> <SiReact size="2.5rem" />
+            <SiHtml5 size="2.5rem" /> <SiCss3 size="2.5rem" />
+            <SiNpm size="2.5rem" />
+          </HStack>
+        </Box>
       </Box>
     </>
   );
 };
-export default ProjectComponent;
+export default ProjectComponentlol;

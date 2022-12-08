@@ -18,8 +18,8 @@ const Nav = () => {
     <>
       <Box as="nav" p="2">
         <HStack spacing="5" justify="space-between">
-          <Box display="flex">
-            <Text as="p" fontSize="24px" display="inline-box">
+          <Box >
+            <Text as="p" fontSize="2xl" >
               <i>Sourav Bandyopadhyay</i>
             </Text>
           </Box>
