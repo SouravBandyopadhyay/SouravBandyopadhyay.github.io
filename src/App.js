@@ -11,8 +11,7 @@ export default function App() {
     <div className="App">
       <div className="nav">
         <Nav />
-      </div>
-      {/* <Home /> */}
+      </div>     
       <Home2 />
       <br />
       <section id="about">
