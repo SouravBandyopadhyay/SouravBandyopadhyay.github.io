@@ -2,12 +2,15 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { createRoot } from "react-dom/client";
 
 import App from "./App";
+import React from "react";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-  <ChakraProvider>
-    <App />
-  </ChakraProvider>
+  <React.StrictMode>
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  </React.StrictMode>
 );

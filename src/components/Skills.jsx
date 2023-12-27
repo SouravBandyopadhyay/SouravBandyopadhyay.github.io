@@ -1,12 +1,5 @@
-import {
-  Grid,
-  GridItem,
-  Box,
-  Heading,
-  Text,
-  Icon,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { AspectRatio, Box, Flex, Icon, keyframes } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import {
   SiNpm,
   SiHtml5,
@@ -24,6 +17,7 @@ import {
   SiGithub,
   SiGit,
 } from "react-icons/si";
+
 const icons = [
   { id: 1, icon: SiNpm, text: "NPM" },
   { id: 2, icon: SiHtml5, text: "HTML" },
@@ -41,69 +35,29 @@ const icons = [
   { id: 14, icon: SiGithub, text: "Github" },
   { id: 15, icon: SiGit, text: "Git" },
 ];
-const Skills = () => {
+
+export default function Skills() {
+  const animationKeyframes = keyframes`
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+`;
+
+  const animation = `${animationKeyframes} 20s linear infinite`;
   return (
-    <>
-      <Box>
-        <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} marginTop={2}>
-          <Text
-            as={"span"}
-            position={"relative"}
-            _after={{
-              content: "''",
-              width: "full",
-              height: useBreakpointValue({ base: "20%", md: "25%" }),
-              position: "absolute",
-              bottom: 1,
-              left: 0,
-              zIndex: -1,
-            }}
-          >
-            Skills
-          </Text>
-        </Heading>
-        <Box
-          w="100%"
-          h="-moz-max-content"
-          display="flex"
-          gap="1rem"
-          justifyContent="space-evenly"
-        >
-          <Box w="90%" p={2} margin="auto">
-            <Grid
-              p={2}
-              templateColumns={[
-                "1fr",
-                "repeat(2,1fr)",
-                "repeat(2, 1fr)",
-                "repeat(3, 1fr)",
-              ]}
-              gap={[2, 2, 3, 3]}
-            >
-              {icons.map((el) => (
-                <GridItem
-                  w="100%"
-                  display="inline-flex"
-                  gap={4}
-                  p={1}
-                  _hover={{
-                    transform: "translateY(-5px)",
-                    fontWeight: 700,
-                    color: "blue.200",
-                  }}
-                  key={el.id}
-                >
-                  <Icon as={el.icon} boxSize={["3em", "4em", "5em"]} />
-                  <Text fontSize={["xl", "2xl", "3xl"]} margin="auto">
-                    {el.text}
-                  </Text>
-                </GridItem>
-              ))}
-            </Grid>
-          </Box>
-        </Box>
-      </Box>
-    </>
+    <Box
+      p={4}
+      w="full"
+      // border="2px solid red"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      overflow={"hidden"}
+    >
+      <Flex as={motion.div} animation={animation} gap={10}>
+        {icons.map((el) => (
+          <Icon as={el.icon} boxSize={16} key={el.text} />
+        ))}
+      </Flex>
+    </Box>
   );
-};
-export default Skills;
+}

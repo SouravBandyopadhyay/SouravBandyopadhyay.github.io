@@ -1,74 +1,12 @@
 import {
-  Box,
   Heading,
   Text,
-  Hide,
   Stack,
-  Flex,
   useBreakpointValue,
+  Center,
 } from "@chakra-ui/react";
-import Illust from "./Illust";
 const About = () => {
   return (
-    // <>
-    //   <Box
-    //     fontSize={{ base: "1rem", md: "1.5rem", lg: "2rem" }}
-    //     textAlign="center"
-    //     p="1.5"
-    //     border="2px solid red"
-    //   >
-    //     <Heading
-    //       as="h1"
-    //       fontSize={{ base: "24px", md: "30px", lg: "36px" }}
-    //       mb={3}
-    //     >
-    //       About Me
-    //     </Heading>
-    //     <Box
-    //       w="100%"
-    //       h="-moz-max-content"
-    //       display="flex"
-    //       gap="1rem"
-    //       justifyContent="space-evenly"
-    //     >
-    //       <Box
-    //         w="60%"
-    //         p={4}
-    //         fontSize={{ base: "1rem", md: "1.3rem", lg: "1.6rem" }}
-    //       >
-    //         <Text textAlign="left">
-    //           I'm a{" "}
-    //           <strong>
-    //             <i> Web Developer </i>
-    //           </strong>
-    //           from Gurugram, Haryana.
-    //           <br />
-    //           Gone through rigirous and competetive coding cirrculam and learned
-    //           MERN Stack at Masai School. I have done various group as well as
-    //           individual projects in my coding journey.Check out some of my work
-    //           in the
-    //           <strong>
-    //             <i> Project </i>
-    //           </strong>
-    //           section.
-    //           <br />
-    //           I am open to Job opportunities where I can contribute, learn and
-    //           grow. If you have a good opportunity that matches my skills and
-    //           experience then don't hesitate to
-    //           <strong>
-    //             <i> Contact </i>
-    //           </strong>
-    //           me.
-    //         </Text>
-    //       </Box>
-    //       <Hide below="md">
-    //         <Box w="30%">
-    //           <Illust />
-    //         </Box>
-    //       </Hide>
-    //     </Box>
-    //   </Box>
-    // </>
     <>
       <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }} marginTop={2}>
         <Text
@@ -88,39 +26,39 @@ const About = () => {
         </Text>
       </Heading>
       <Stack direction={{ base: "column", md: "row" }} g={2}>
-        <Flex p={4} flex={1.5} align={"center"} justify={"center"}>
-          <Stack spacing={6} w={"full"} maxW={"lg"}>
-            <Text
-              textAlign="left"
-              fontSize={{ base: "1rem", md: "1.3rem", lg: "1.6rem" }}
-            >
-              I'm a{" "}
-              <strong>
-                <i> Web Developer </i>
-              </strong>
-              from Gurugram, Haryana.
-              <br />
-              Gone through rigirous and competetive coding cirrculam and learned
-              MERN Stack at Masai School. I have done various group as well as
-              individual projects in my coding journey.Check out some of my work
-              in the
-              <strong>
-                <i> Project </i>
-              </strong>
-              section.
-              <br />I am open to Job opportunities where I can contribute, learn
-              and grow. If you have a good opportunity that matches my skills
-              and experience then don't hesitate to
-              <strong>
-                <i> Contact </i>
-              </strong>
-              me.
+        <Center p={10} align={"center"} justify={"center"} w="full">
+          <Text
+            textAlign="left"
+            fontSize={{ base: "1rem", md: "1.3rem", lg: "1.6rem" }}
+          >
+            I'm a{" "}
+            <Text as={"i"} fontWeight={700}>
+              Software Developer{" "}
             </Text>
-          </Stack>
-        </Flex>
-        <Flex p={4} flex={1} align={"center"} justify={"center"}>
-          <Illust />
-        </Flex>
+            from Gurugram, Haryana.
+            <br />
+            Currently working as{" "}
+            <Text as="u">
+              Associate Software Developer at Detroit Software Consultants India
+              Pvt ltd
+            </Text>
+            . Before working have went through a rigorous and competitive coding
+            curriculum and learned web development from Masai School. I have
+            done various group as well as individual projects in my coding
+            journey. Check out some of my work in the{" "}
+            <Text as={"i"} fontWeight={700}>
+              Project{" "}
+            </Text>
+            section.
+            <br />I am open to Job opportunities where I can contribute, learn
+            and grow. If you have a good opportunity that matches my skills and
+            experience then don't hesitate to{" "}
+            <Text as={"i"} fontWeight={700}>
+              Contact{" "}
+            </Text>
+            me.
+          </Text>
+        </Center>
       </Stack>
     </>
   );

@@ -18,9 +18,9 @@ const Nav = () => {
     <>
       <Box as="nav" p="2">
         <HStack spacing="5" justify="space-between">
-          <Box >
-            <Text as="p" fontSize="2xl" >
-              <i>Sourav Bandyopadhyay</i>
+          <Box>
+            <Text as="i" fontSize="2xl">
+              Sourav Bandyopadhyay
             </Text>
           </Box>
           {isDesktop ? (

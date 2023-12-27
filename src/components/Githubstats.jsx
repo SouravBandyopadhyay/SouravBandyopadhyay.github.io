@@ -13,11 +13,22 @@ const GithubStats = () => {
         >
           Github Statistics
         </Heading>
-        <Box w="-moz-max-content" >
+        <Box w="-moz-max-content">
           <GitHubCalendar
             username="SouravBandyopadhyay"
             blockMargin={6}
+            // theme={{
+            //   "light": [
+            //     "hsl(0, 0%, 92%)",
+            //     "rebeccapurple"
+            //   ],
+            //   "dark": [
+            //     "hsl(0, 0%, 22%)",
+            //     "hsl(225,92%,77%)"
+            //   ]
+            // }}
             blockSize={15}
+            blockRadius={20}
             fontSize={14}
             style={{ margin: "auto" }}
           >
@@ -39,7 +50,6 @@ const GithubStats = () => {
         >
           <Image
             w="100%"
-            // boxSize="250px"
             objectFit="cover"
             p={2}
             src="https://github-readme-stats.vercel.app/api/top-langs?username=souravbandyopadhyay&show_icons=true&locale=en&layout=compact&theme=algolia"
@@ -48,7 +58,6 @@ const GithubStats = () => {
 
           <Image
             w="100%"
-            // boxSize="250px"
             objectFit="cover"
             p={2}
             src="https://github-readme-stats.vercel.app/api?username=souravbandyopadhyay&show_icons=true&locale=en&theme=algolia"
@@ -57,7 +66,6 @@ const GithubStats = () => {
 
           <Image
             w="100%"
-            // boxSize="250px"
             objectFit="cover"
             p={2}
             src="https://github-readme-streak-stats.herokuapp.com/?user=souravbandyopadhyay&theme=algolia"

@@ -1,12 +1,10 @@
+import React from "react";
 import {
   Box,
-  chakra,
   Container,
   Heading,
   Stack,
   Text,
-  useColorModeValue,
-  VisuallyHidden,
   VStack,
   Icon,
   Link,
@@ -17,12 +15,32 @@ import {
   FaGithub,
   FaHome,
   FaPhoneAlt,
-  FaDownload,
   FaFolder,
+  FaDownload,
 } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
-export default function SmallWithSocial() {
+const contactDetails = [
+  { icon: FaHome, text: "Gurugram Haryana, India" },
+  { icon: FaPhoneAlt, text: "+91 8240411987 / 9062415895" },
+  {
+    icon: FaFolder,
+    text: "Resume",
+    link: "https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view?usp=sharing",
+    download: "Sourav-Bandyopadhyay-Resume.pdf",
+  },
+];
+
+const socialLinks = [
+  { icon: FaGithub, link: "https://github.com/SouravBandyopadhyay" },
+  {
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/souravbandyopadhyay/",
+  },
+  { icon: SiGmail, link: "mailto:souravb.1998@gmail.com?" },
+];
+
+export default function Contact() {
   return (
     <Box>
       <VStack>
@@ -38,46 +56,24 @@ export default function SmallWithSocial() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <HStack>
-          <Icon as={FaHome} boxSize={["2em", "3em"]} />
-          <Text fontSize={["md", "lg"]}>
-            &nbsp;&nbsp; Gurugram Haryana,India
-          </Text>
-        </HStack>
-        <HStack>
-          <Icon as={FaPhoneAlt} boxSize={["2em", "3em"]} />
-          <Text fontSize={["md", "lg"]}>
-            &nbsp;&nbsp; +91 8240411987 / 9062415895
-          </Text>
-        </HStack>
-        <HStack>
-          <Icon as={FaFolder} boxSize={["2em", "3em"]} />
-          <Link
-            href="https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view?usp=sharing"
-            download="Sourav-Bandyopadhyay-Resume.pdf"
-            isExternal
-          >
-            <Text fontSize={["md", "lg"]}>Resume</Text>
-          </Link>
-        </HStack>
+        {contactDetails.map(({ icon: IconComponent, text, link, download }) => (
+          <HStack key={text}>
+            <Icon as={IconComponent} boxSize={["2em", "3em"]} />
+            {link ? (
+              <Link href={link} download={download} isExternal>
+                <Text fontSize={["md", "lg"]}>{text}</Text>
+              </Link>
+            ) : (
+              <Text fontSize={["md", "lg"]}>&nbsp;&nbsp;{text}</Text>
+            )}
+          </HStack>
+        ))}
         <Stack direction={"row"} spacing={6} p={2}>
-          <Link
-            margin="auto"
-            href="https://github.com/SouravBandyopadhyay"
-            isExternal
-          >
-            <Icon as={FaGithub} boxSize={["2em", "3em"]} />
-          </Link>
-          <Link
-            margin="auto"
-            href="https://www.linkedin.com/in/souravbandyopadhyay/"
-            isExternal
-          >
-            <Icon as={FaLinkedin} boxSize={["2em", "3em"]} />
-          </Link>
-          <Link margin="auto" href="mailto:souravb.1998@gmail.com?" isExternal>
-            <Icon as={SiGmail} boxSize={["2em", "3em"]} />
-          </Link>
+          {socialLinks.map(({ icon: IconComponent, link }) => (
+            <Link key={link} margin="auto" href={link} isExternal>
+              <Icon as={IconComponent} boxSize={["2em", "3em"]} />
+            </Link>
+          ))}
         </Stack>
       </Container>
       <Box
@@ -87,7 +83,7 @@ export default function SmallWithSocial() {
         p={2}
       >
         <Text>
-          © 2022 All rights reserved. Created by Sourav Bandyopadhyay with{" "}
+          © 2023 All rights reserved. Created by Sourav Bandyopadhyay with{" "}
           <span role="img">❤️</span>
         </Text>
       </Box>

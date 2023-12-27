@@ -20,7 +20,7 @@ const MobileDrawer = () => {
       <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
         <HamburgerIcon boxSize={6} />
       </Button>
-      <Drawer
+      <Drawer 
         isOpen={isOpen}
         placement="top"
         onClose={onClose}
