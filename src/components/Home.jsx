@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Divider,
   Flex,
   Heading,
   Image,
@@ -48,17 +49,18 @@ export default function Home() {
               Sourav Bandyopadhyay
             </ChakraMotionBox>
           </Heading>
-          <Text
-            textAlign="left"
-            fontSize={{ base: "1rem", md: "1.3rem", lg: "1.6rem" }}
-          >
-            Enthusiastic Full Stack Web Developer{" "}
+          <Text textAlign="left" fontSize={{ base: "md", md: "md", lg: "lg" }}>
             <span role="img" aria-label="rocket">
               🚀
             </span>{" "}
-            dedicated to delivering cutting-edge websites and applications. I'm
-            passionate about crafting experiences that are engaging, accessible
-            and user-centric.
+            I'm a Software Developer based in Gurugram, Haryana, currently
+            working as an Associate Software Developer at Detroit Software
+            Consultants India. I honed my development skills through Masai
+            School, completing a rigorous coding curriculum. With experience in
+            both group and individual projects, I'm eager to contribute, learn,
+            and grow in new opportunities. Check out my projects in the
+            dedicated section, and feel free to reach out for potential
+            collaborations.
           </Text>
           <Box>
             <Button
