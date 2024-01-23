@@ -3,13 +3,15 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../components/Home";
 import Contact from "../components/Contact";
 import Milestones from "../Component/Journey";
+import Project from "../Component/Project";
 
 const AllRoutes = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/journey" element={<Milestones/>}/>
+      <Route path="/journey" element={<Milestones />} />
+      <Route path="/project" element={<Project />} />
     </Routes>
   );
 };
