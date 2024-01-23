@@ -38,31 +38,27 @@ import {
   Flex,
   Icon,
   Text,
-  Link,
-  Image,
   Button,
-  Heading,
-  Stack,
   VStack,
   Drawer,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
   DrawerContent,
   IconButton,
   useDisclosure,
   DrawerOverlay,
   useColorModeValue,
   useColorMode,
+  Divider,
 } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
 import { AiOutlineTeam, AiOutlineHome } from "react-icons/ai";
 import { BsFolder2, BsCalendarCheck } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { RiFlashlightFill } from "react-icons/ri";
-import NavItem from "./Component/NavItem";
+import { InternalLink, ExternalLink } from "./Component/NavItem";
 import AllRoutes from "./Routes/AllRoutes";
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { BsSubstack } from "react-icons/bs";
 
 const navItems = [
   { icon: AiOutlineHome, label: "Home", href: "/" },
@@ -70,6 +66,28 @@ const navItems = [
   { icon: BsFolder2, label: "Skills", href: "/Skills" },
   { icon: BsCalendarCheck, label: "Project", href: "/Project" },
   // { icon: BsCalendarCheck, label: "Contact", href: "/Contact" },
+];
+const onlinenavItems = [
+  {
+    icon: BsSubstack,
+    label: "Substack",
+    href: "https://souravbandyopadhyay.substack.com/",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/souravbandyopadhyay/",
+  },
+  {
+    icon: FaTwitter,
+    label: "Twitter",
+    href: "https://twitter.com/souravb_1998",
+  },
+  {
+    icon: FaGithub,
+    label: "Github",
+    href: "https://github.com/SouravBandyopadhyay",
+  },
 ];
 
 export default function Index() {
@@ -133,47 +151,6 @@ export default function Index() {
           bg={useColorModeValue("auto", "gray.800")}
         >
           <AllRoutes />
-          {/* <Stack
-            direction={{ base: "column", sm: "row" }}
-            alignItems="center"
-            justifyContent="center"
-            h="100%"
-          >
-            <Stack spacing={8}>
-              <Box>
-                <Heading color="blue.400" fontSize="3xl">
-                  Point of sale
-                </Heading>
-                <Text fontSize="md" color="gray.500">
-                  Manage your inventory and sale effeciently.
-                </Text>
-              </Box>
-              <Stack
-                direction={{ base: "column", md: "row" }}
-                spacing={4}
-                justifyContent="center"
-              >
-                <Button
-                  rounded="full"
-                  bg="blue.400"
-                  color="white"
-                  _hover={{
-                    bg: "blue.500",
-                  }}
-                >
-                  Stocks
-                </Button>
-                <Button rounded="full">Vendors</Button>
-              </Stack>
-            </Stack>
-
-            <Image
-              alt="Homepage Image"
-              objectFit="cover"
-              width="60vh"
-              src="https://plus.unsplash.com/premium_photo-1685136482569-a59b03025108?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
-          </Stack> */}
         </Box>
       </Box>
     </Box>
@@ -222,11 +199,31 @@ const SidebarContent = ({ ...props }) => (
           fontSize="md"
           color="gray.600"
           aria-label="Main Navigation"
+          gap="5px"
         >
           {navItems.map((item, index) => (
-            <NavItem key={index} icon={item.icon} to={item.href}>
+            <InternalLink key={index} icon={item.icon} to={item.href}>
               {item.label}
-            </NavItem>
+            </InternalLink>
+          ))}
+          {/* SECTION Online Section */}
+
+          <Divider />
+
+          <Text textAlign="left" px="4">
+            {" "}
+            Online
+          </Text>
+
+          {onlinenavItems.map((item, index) => (
+            <ExternalLink
+              key={index}
+              icon={item.icon}
+              href={item.href}
+              isExternal
+            >
+              {item.label}
+            </ExternalLink>
           ))}
         </Flex>
       </Box>
@@ -242,12 +239,12 @@ const SidebarContent = ({ ...props }) => (
             _hover={{ textDecoration: "none" }}
           >
             <Avatar
-              size={"lg"}
+              size={"md"}
               name="Ahmad"
               src="https://i.postimg.cc/tJFg0DSh/img.jpg"
             />
           </MenuButton>
-          <MenuList fontSize={17} zIndex={5555}>
+          {/* <MenuList fontSize={17} zIndex={5555}>
             <MenuItem as={Link} to="#">
               My profile
             </MenuItem>
@@ -255,7 +252,7 @@ const SidebarContent = ({ ...props }) => (
               Change password
             </MenuItem>
             <MenuItem>Logout</MenuItem>
-          </MenuList>
+          </MenuList> */}
         </Menu>
       </Flex>
     </VStack>

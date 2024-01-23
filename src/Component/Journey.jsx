@@ -7,12 +7,9 @@ import {
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaTools } from "react-icons/fa";
-import { CgOrganisation } from "react-icons/cg";
-import { IoIosSend } from "react-icons/io";
-// Here we have used react-icons package for the icons
-import { FiPackage, FiHome, FiBarChart2, FiCheckCircle } from "react-icons/fi";
-import { FcCollaboration } from "react-icons/fc";
+
+import { FiCheckCircle } from "react-icons/fi";
+
 import {
   FaLaptopCode,
   FaChalkboardTeacher,
@@ -22,9 +19,6 @@ import { CgWorkAlt } from "react-icons/cg";
 import { IoMailOutline } from "react-icons/io5";
 import { FcBusinessman } from "react-icons/fc";
 const Milestones2022 = () => {
-  const linkColor = "blue.400";
-  const linkHoverColor = "blue.600";
-
   return (
     <Container maxW="7xl" p={{ base: 2, sm: 10 }}>
       <VStack textAlign="start" align="start" mb={5}>
@@ -34,7 +28,8 @@ const Milestones2022 = () => {
           </Heading>
           <Box>
             <MilestoneItem icon={FaLaptopCode}>
-              Enrolled into Masai School for Full Stack Web Development Programe
+              Enrolled into Masai School for Full Stack Web Development
+              Programme
             </MilestoneItem>
             <MilestoneItem icon={CgWorkAlt}>
               Started Collaboration project with Fellow batchmates.
@@ -69,7 +64,7 @@ const Milestones2023 = () => {
               Developed an Email Service Provider tool.
             </MilestoneItem>
             <MilestoneItem icon={FaHandsHelping} skipTrail>
-              Collaborated with the US team to develop an E-commerce Platform
+              Collaborating with the US team to develop an E-commerce Platform
               for Digital Assets.
             </MilestoneItem>
           </Box>
