@@ -2,17 +2,25 @@ import {
   VStack,
   Heading,
   Box,
-  Link,
   Container,
-  BoxProps,
   Circle,
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaTools } from "react-icons/fa";
+import { CgOrganisation } from "react-icons/cg";
+import { IoIosSend } from "react-icons/io";
 // Here we have used react-icons package for the icons
 import { FiPackage, FiHome, FiBarChart2, FiCheckCircle } from "react-icons/fi";
-
+import { FcCollaboration } from "react-icons/fc";
+import {
+  FaLaptopCode,
+  FaChalkboardTeacher,
+  FaHandsHelping,
+} from "react-icons/fa";
+import { CgWorkAlt } from "react-icons/cg";
+import { IoMailOutline } from "react-icons/io5";
+import { FcBusinessman } from "react-icons/fc";
 const Milestones2022 = () => {
   const linkColor = "blue.400";
   const linkHoverColor = "blue.600";
@@ -25,16 +33,15 @@ const Milestones2022 = () => {
             2022
           </Heading>
           <Box>
-            <MilestoneItem icon={FaTools}>
-              Learned Lorem Ipsum technologies and frameworks.
+            <MilestoneItem icon={FaLaptopCode}>
+              Enrolled into Masai School for Full Stack Web Development Programe
             </MilestoneItem>
-            <MilestoneItem icon={FaTools}>
-              Learned Lorem Ipsum technologies and frameworks.
+            <MilestoneItem icon={CgWorkAlt}>
+              Started Collaboration project with Fellow batchmates.
             </MilestoneItem>
-            <MilestoneItem icon={FaTools}>
-              Learned Lorem Ipsum technologies and frameworks.
+            <MilestoneItem icon={FaChalkboardTeacher} skipTrail>
+              Learned MERN Stack
             </MilestoneItem>
-            {/* Add more MilestoneItem components for 2022 */}
           </Box>
         </Box>
       </VStack>
@@ -43,9 +50,6 @@ const Milestones2022 = () => {
 };
 
 const Milestones2023 = () => {
-  const linkColor = "blue.400";
-  const linkHoverColor = "blue.600";
-
   return (
     <Container maxW="7xl" p={{ base: 2, sm: 10 }}>
       <VStack textAlign="start" align="start" mb={5}>
@@ -54,19 +58,20 @@ const Milestones2023 = () => {
             2023
           </Heading>
           <Box>
-            <MilestoneItem icon={FaTools}>
-              Explored Lorem Ipsum cutting-edge technologies.
+            <MilestoneItem icon={FcBusinessman}>
+              Graduated from Masai School in Full Stack Web Development
+              Upskilling.
             </MilestoneItem>
-            <MilestoneItem icon={FaTools}>
-              Learned Lorem Ipsum technologies and frameworks.
+            <MilestoneItem icon={CgWorkAlt}>
+              Joined Detroit Software Consulting in Gurugram.
             </MilestoneItem>
-            <MilestoneItem icon={FaTools}>
-              Learned Lorem Ipsum technologies and frameworks.
+            <MilestoneItem icon={IoMailOutline}>
+              Developed an Email Service Provider tool.
             </MilestoneItem>
-            <MilestoneItem icon={FaTools}>
-              Learned Lorem Ipsum technologies and frameworks.
+            <MilestoneItem icon={FaHandsHelping} skipTrail>
+              Collaborated with the US team to develop an E-commerce Platform
+              for Digital Assets.
             </MilestoneItem>
-            {/* Add more MilestoneItem components for 2023 */}
           </Box>
         </Box>
       </VStack>
@@ -110,8 +115,8 @@ const MilestoneItem = ({
 const Milestones = () => {
   return (
     <VStack>
-      <Milestones2022 />
       <Milestones2023 />
+      <Milestones2022 />
     </VStack>
   );
 };
