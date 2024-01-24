@@ -63,7 +63,7 @@ import { BsSubstack } from "react-icons/bs";
 const navItems = [
   { icon: AiOutlineHome, label: "Home", href: "/" },
   { icon: AiOutlineTeam, label: "Journey", href: "/journey" },
-  { icon: BsFolder2, label: "Skills", href: "/Skills" },
+  { icon: BsFolder2, label: "Extras", href: "/extra" },
   { icon: BsCalendarCheck, label: "Project", href: "/Project" },
   // { icon: BsCalendarCheck, label: "Contact", href: "/Contact" },
 ];
