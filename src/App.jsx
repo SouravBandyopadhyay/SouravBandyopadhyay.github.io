@@ -59,7 +59,8 @@ import { InternalLink, ExternalLink } from "./Component/NavItem";
 import AllRoutes from "./Routes/AllRoutes";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { BsSubstack } from "react-icons/bs";
-
+import { MdDesignServices } from "react-icons/md";
+import { SiGmail } from "react-icons/si";
 const navItems = [
   { icon: AiOutlineHome, label: "Home", href: "/" },
   { icon: AiOutlineTeam, label: "Journey", href: "/journey" },
@@ -87,6 +88,16 @@ const onlinenavItems = [
     icon: FaGithub,
     label: "Github",
     href: "https://github.com/SouravBandyopadhyay",
+  },
+  {
+    icon: MdDesignServices,
+    label: "Uiverse",
+    href: "https://uiverse.io/profile/SouravBandyopadhyay",
+  },
+  {
+    icon: SiGmail,
+    label: "Email",
+    href: "mailto:souravb.1998@gmail.com",
   },
 ];
 
@@ -182,14 +193,19 @@ const SidebarContent = ({ ...props }) => (
     >
       <Box w="full">
         <Flex px="4" py="5" align="center">
-          <Icon as={RiFlashlightFill} h={8} w={8} />
+          {/* <Icon as={RiFlashlightFill} h={8} w={8} /> */}
+          {/* <Avatar
+            size={"md"}
+            name="Sourav Bandyopadhyay"
+            src="https://i.postimg.cc/tJFg0DSh/img.jpg"
+          /> */}
           <Text
-            fontSize="2xl"
+            fontSize="sm"
             ml="2"
             color={useColorModeValue("brand.500", "white")}
             fontWeight="semibold"
           >
-            POS
+            SOURAV BANDYOPADHYAY
           </Text>
         </Flex>
         {/* SECTION Side NavItem  */}
@@ -238,11 +254,11 @@ const SidebarContent = ({ ...props }) => (
             cursor={"pointer"}
             _hover={{ textDecoration: "none" }}
           >
-            <Avatar
+            {/* <Avatar
               size={"md"}
               name="Ahmad"
               src="https://i.postimg.cc/tJFg0DSh/img.jpg"
-            />
+            /> */}
           </MenuButton>
           {/* <MenuList fontSize={17} zIndex={5555}>
             <MenuItem as={Link} to="#">
