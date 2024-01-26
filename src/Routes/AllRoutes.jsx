@@ -15,7 +15,7 @@ const AllRoutes = () => {
       <Route path="/journey" element={<Milestones />} />
       <Route path="/project" element={<Project />} />
       <Route path="/skills" element={<Skills />} />
-      <Route path="/extra" element={<Extras />} />
+      {/* <Route path="/extra" element={<Extras />} /> */}
     </Routes>
   );
 };
