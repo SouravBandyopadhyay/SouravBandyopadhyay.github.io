@@ -52,7 +52,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { AiOutlineTeam, AiOutlineHome } from "react-icons/ai";
-import { BsFolder2, BsCalendarCheck } from "react-icons/bs";
+import { BsCalendarCheck } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { RiFlashlightFill } from "react-icons/ri";
 import { InternalLink, ExternalLink } from "./Component/NavItem";
@@ -60,12 +60,14 @@ import AllRoutes from "./Routes/AllRoutes";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { BsSubstack } from "react-icons/bs";
 import { MdDesignServices } from "react-icons/md";
-import { SiGmail } from "react-icons/si";
+import { SiGmail, SiLeetcode } from "react-icons/si";
+import { motion } from "framer-motion";
+import { CiDark, CiLight } from "react-icons/ci";
 const navItems = [
   { icon: AiOutlineHome, label: "Home", href: "/" },
   { icon: AiOutlineTeam, label: "Journey", href: "/journey" },
   // { icon: BsFolder2, label: "Extras", href: "/extra" },
-  { icon: BsCalendarCheck, label: "Project", href: "/Project" },
+  { icon: BsCalendarCheck, label: "Project", href: "/project" },
   // { icon: BsCalendarCheck, label: "Contact", href: "/Contact" },
 ];
 const onlinenavItems = [
@@ -95,11 +97,24 @@ const onlinenavItems = [
     href: "https://uiverse.io/profile/SouravBandyopadhyay",
   },
   {
+    icon: SiLeetcode,
+    label: "LeetCode",
+    href: "https://leetcode.com/Sourav_280598/",
+  },
+  {
     icon: SiGmail,
     label: "Email",
     href: "mailto:souravb.1998@gmail.com",
   },
 ];
+
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30,
+};
+
+const AnimatedButton = motion(IconButton);
 
 export default function Index() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -110,7 +125,7 @@ export default function Index() {
       as="section"
       bg={useColorModeValue("gray.50", "gray.700")}
       minH="100vh"
-      border="2px solid red"
+      // border="2px solid red"
     >
       <SidebarContent display={{ base: "none", md: "unset" }} />
       <Drawer isOpen={isOpen} onClose={onClose} placement="left">
@@ -122,7 +137,7 @@ export default function Index() {
       <Box
         ml={{ base: 0, md: 60 }}
         transition=".3s ease"
-        border="2px solid green"
+        // border="2px solid green"
       >
         <Flex
           as="header"
@@ -145,17 +160,23 @@ export default function Index() {
             size="md"
           />
 
-          <Flex align="center" border="2px solid teal">
-            <Button onClick={toggleColorMode}>
-              Toggle {colorMode === "light" ? "Dark" : "Light"}
-            </Button>
+          <Flex align="center">
+            <AnimatedButton
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              transition={spring}
+              onClick={toggleColorMode}
+            >
+              {colorMode === "light" ? <CiDark /> : <CiLight />}
+            </AnimatedButton>
+
             <Icon as={RiFlashlightFill} h={8} w={8} />
           </Flex>
         </Flex>
 
         {/* SECTION For Working On components */}
         <Box
-          border="2px solid orange"
+          // border="2px solid orange"
           as="main"
           p={14}
           minH="30rem"

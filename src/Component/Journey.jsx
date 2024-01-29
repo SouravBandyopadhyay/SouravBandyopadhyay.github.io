@@ -53,7 +53,7 @@ const Milestones2023 = () => {
       <VStack textAlign="start" align="start">
         <Box zIndex={5}>
           <Heading fontSize="4xl" fontWeight="600" my={5}>
-            2023
+            Journey
           </Heading>
           <Box>
             <MilestoneItem
