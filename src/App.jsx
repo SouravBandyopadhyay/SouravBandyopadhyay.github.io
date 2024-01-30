@@ -50,6 +50,7 @@ import {
   useColorModeValue,
   useColorMode,
   Divider,
+  Image,
 } from "@chakra-ui/react";
 import { AiOutlineTeam, AiOutlineHome } from "react-icons/ai";
 import { BsCalendarCheck } from "react-icons/bs";
@@ -125,7 +126,6 @@ export default function Index() {
       as="section"
       bg={useColorModeValue("gray.50", "gray.700")}
       minH="100vh"
-      // border="2px solid red"
     >
       <SidebarContent display={{ base: "none", md: "unset" }} />
       <Drawer isOpen={isOpen} onClose={onClose} placement="left">
@@ -160,7 +160,11 @@ export default function Index() {
             size="md"
           />
 
-          <Flex align="center">
+          <Flex
+            align="center"
+            border="2px solid red"
+            justifyContent="space-around"
+          >
             <AnimatedButton
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
@@ -169,8 +173,14 @@ export default function Index() {
             >
               {colorMode === "light" ? <CiDark /> : <CiLight />}
             </AnimatedButton>
-
-            <Icon as={RiFlashlightFill} h={8} w={8} />
+            <Image
+              src={require("./assets/Logo.jpeg")}
+              fallbackSrc="SB"
+              alt="SB"
+              h={12}
+              w={12}
+              borderRadius="full"
+            />
           </Flex>
         </Flex>
 
@@ -178,8 +188,8 @@ export default function Index() {
         <Box
           // border="2px solid orange"
           as="main"
-          p={14}
-          minH="30rem"
+          p={8}
+          minH="34rem"
           bg={useColorModeValue("auto", "gray.800")}
         >
           <AllRoutes />

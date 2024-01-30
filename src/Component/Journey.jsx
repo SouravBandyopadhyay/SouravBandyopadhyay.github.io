@@ -21,31 +21,6 @@ import {
 import { CgWorkAlt } from "react-icons/cg";
 import { IoMailOutline } from "react-icons/io5";
 import { FcBusinessman } from "react-icons/fc";
-// const Milestones2022 = () => {
-//   return (
-//     <Container maxW="7xl" p={{ base: 1, sm: 6 }}>
-//       <VStack textAlign="start" align="start">
-//         <Box zIndex={5}>
-//           <Heading fontSize="4xl" fontWeight="600" my={5}>
-//             2022
-//           </Heading>
-//           <Box>
-//             <MilestoneItem icon={FaLaptopCode}>
-//               Enrolled into Masai School for Full Stack Web Development
-//               Programme
-//             </MilestoneItem>
-//             <MilestoneItem icon={CgWorkAlt}>
-//               Started Collaboration project with Fellow batchmates.
-//             </MilestoneItem>
-//             <MilestoneItem icon={FaChalkboardTeacher} skipTrail>
-//               Learned MERN Stack
-//             </MilestoneItem>
-//           </Box>
-//         </Box>
-//       </VStack>
-//     </Container>
-//   );
-// };
 
 const Milestones2023 = () => {
   return (
@@ -58,7 +33,7 @@ const Milestones2023 = () => {
           <Box>
             <MilestoneItem
               icon={FcBusinessman}
-              isCompanyMilestone={'Masai School'}
+              isCompanyMilestone={"Masai School"}
               startDate="April 2022"
               endDate="March 2023"
             >
@@ -67,7 +42,7 @@ const Milestones2023 = () => {
             </MilestoneItem>
             <MilestoneItem
               icon={CgWorkAlt}
-              isCompanyMilestone={'Detroit Software Consulting'}
+              isCompanyMilestone={"Detroit Software Consulting"}
               startDate="April 2023"
             >
               Joined Detroit Software Consulting in Gurugram, Haryana.
@@ -180,7 +155,6 @@ const Milestones = () => {
   return (
     <VStack>
       <Milestones2023 />
-      {/* <Milestones2022 /> */}
     </VStack>
   );
 };
