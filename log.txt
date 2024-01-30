@@ -4,4 +4,4 @@ Reference:
 
 
 
-    - Add coding ninjas also for DSA
+    - Add coding ninjas also for DSs
