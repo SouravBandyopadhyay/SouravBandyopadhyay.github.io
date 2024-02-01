@@ -33,10 +33,8 @@
 // }
 
 import {
-  Avatar,
   Box,
   Flex,
-  Icon,
   Text,
   Button,
   VStack,
@@ -55,7 +53,6 @@ import {
 import { AiOutlineTeam, AiOutlineHome } from "react-icons/ai";
 import { BsCalendarCheck } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
-import { RiFlashlightFill } from "react-icons/ri";
 import { InternalLink, ExternalLink } from "./Component/NavItem";
 import AllRoutes from "./Routes/AllRoutes";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
@@ -109,14 +106,6 @@ const onlinenavItems = [
   },
 ];
 
-const spring = {
-  type: "spring",
-  stiffness: 700,
-  damping: 30,
-};
-
-const AnimatedButton = motion(IconButton);
-
 export default function Index() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onClose, onOpen } = useDisclosure();
@@ -162,25 +151,23 @@ export default function Index() {
 
           <Flex
             align="center"
-            border="2px solid red"
+            // border="2px solid red"
             justifyContent="space-around"
           >
-            <AnimatedButton
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              transition={spring}
+            <IconButton
               onClick={toggleColorMode}
+              borderRadius={"full"}
             >
               {colorMode === "light" ? <CiDark /> : <CiLight />}
-            </AnimatedButton>
-            <Image
+            </IconButton>
+            {/* <Image
               src={require("./assets/Logo.jpeg")}
               fallbackSrc="SB"
               alt="SB"
               h={12}
               w={12}
               borderRadius="full"
-            />
+            /> */}
           </Flex>
         </Flex>
 
