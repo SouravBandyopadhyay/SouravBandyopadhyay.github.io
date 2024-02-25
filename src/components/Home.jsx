@@ -87,6 +87,7 @@ export default function Home() {
       </Flex>
       <Flex p={4} flex={1} align={"center"} justify={"center"}>
         <Image
+          loading="lazy"
           margin="auto"
           boxSize={{ base: "200px", md: "300px" }}
           borderRadius="full"

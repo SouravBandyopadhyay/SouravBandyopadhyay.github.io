@@ -57,6 +57,7 @@ const Project = () => {
         >
           <Image
             // w="600"
+            loading="lazy"
             // h="200"
             objectFit="cover"
             src={project.image}
