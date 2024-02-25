@@ -59,11 +59,11 @@ import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { BsSubstack } from "react-icons/bs";
 import { MdDesignServices } from "react-icons/md";
 import { SiGmail, SiLeetcode } from "react-icons/si";
-import { motion } from "framer-motion";
+import { GiJourney } from "react-icons/gi";
 import { CiDark, CiLight } from "react-icons/ci";
 const navItems = [
   { icon: AiOutlineHome, label: "Home", href: "/" },
-  { icon: AiOutlineTeam, label: "Journey", href: "/journey" },
+  { icon: GiJourney, label: "Journey", href: "/journey" },
   // { icon: BsFolder2, label: "Extras", href: "/extra" },
   { icon: BsCalendarCheck, label: "Project", href: "/project" },
   // { icon: BsCalendarCheck, label: "Contact", href: "/Contact" },
@@ -154,10 +154,7 @@ export default function Index() {
             // border="2px solid red"
             justifyContent="space-around"
           >
-            <IconButton
-              onClick={toggleColorMode}
-              borderRadius={"full"}
-            >
+            <IconButton onClick={toggleColorMode} borderRadius={"full"}>
               {colorMode === "light" ? <CiDark /> : <CiLight />}
             </IconButton>
             {/* <Image
@@ -178,6 +175,7 @@ export default function Index() {
           p={8}
           minH="34rem"
           bg={useColorModeValue("auto", "gray.800")}
+          maxH={"100vh"}
         >
           <AllRoutes />
         </Box>

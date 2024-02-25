@@ -17,7 +17,6 @@ export const InternalLink = ({ icon, children, to }) => {
 
   return (
     <Flex
-      // border="2px solid red"
       as={RouterLink}
       to={to}
       color={colorModeValue}
@@ -34,7 +33,6 @@ export const ExternalLink = ({ icon, children, href }) => {
 
   return (
     <Flex
-      // border="2px solid red"
       as="a"
       href={href}
       target="_blank"

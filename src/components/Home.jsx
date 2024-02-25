@@ -11,6 +11,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
+import RedoAnimText from "../Sample";
 
 const ChakraMotionBox = motion(Box, {
   shouldForwardProp: (prop) => isValidMotionProp(prop),
@@ -49,7 +50,10 @@ export default function Home() {
               Sourav Bandyopadhyay
             </ChakraMotionBox>
           </Heading>
-          <Text textAlign="left" fontSize={{ base: "md", md: "md", lg: "lg" }}>
+          <Text
+            textAlign={"left"}
+            fontSize={{ base: "md", md: "md", lg: "lg" }}
+          >
             <span role="img" aria-label="rocket">
               🚀
             </span>{" "}

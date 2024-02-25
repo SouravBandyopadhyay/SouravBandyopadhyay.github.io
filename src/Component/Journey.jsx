@@ -21,10 +21,12 @@ import {
 import { CgWorkAlt } from "react-icons/cg";
 import { IoMailOutline } from "react-icons/io5";
 import { FcBusinessman } from "react-icons/fc";
+import Apps from "../Sample";
+import RedoAnimText from "../Sample";
 
 const Milestones2023 = () => {
   return (
-    <Container maxW="7xl" p={{ base: 1, sm: 6 }}>
+    <Container maxW="7xl" centerContent>
       <VStack textAlign="start" align="start">
         <Box zIndex={5}>
           <Heading fontSize="4xl" fontWeight="600" my={5}>
