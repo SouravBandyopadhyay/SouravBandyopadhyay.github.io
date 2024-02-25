@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c16e771.css",
-    "main.js": "/static/js/main.eab33f46.js",
+    "main.js": "/static/js/main.a3129aac.js",
+    "static/media/GithubFinder.jpeg": "/static/media/GithubFinder.de3d5c0cc317f6b5b83d.jpeg",
+    "static/media/TheMealHub.jpeg": "/static/media/TheMealHub.c819f1c2c989987bcf84.jpeg",
     "index.html": "/index.html",
-    "main.0c16e771.css.map": "/static/css/main.0c16e771.css.map",
-    "main.eab33f46.js.map": "/static/js/main.eab33f46.js.map"
+    "main.a3129aac.js.map": "/static/js/main.a3129aac.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c16e771.css",
-    "static/js/main.eab33f46.js"
+    "static/js/main.a3129aac.js"
   ]
 }
