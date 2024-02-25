@@ -1,12 +1,28 @@
 {
   "files": {
-    "main.js": "/static/js/main.a3129aac.js",
+    "main.js": "/static/js/main.f1391968.js",
+    "static/js/211.72230471.chunk.js": "/static/js/211.72230471.chunk.js",
+    "static/js/31.1dc61096.chunk.js": "/static/js/31.1dc61096.chunk.js",
+    "static/js/182.dcf48098.chunk.js": "/static/js/182.dcf48098.chunk.js",
+    "static/js/956.48ff8d72.chunk.js": "/static/js/956.48ff8d72.chunk.js",
+    "static/js/895.34f8eb4b.chunk.js": "/static/js/895.34f8eb4b.chunk.js",
+    "static/js/672.0d3f973b.chunk.js": "/static/js/672.0d3f973b.chunk.js",
+    "static/js/501.2e8dc763.chunk.js": "/static/js/501.2e8dc763.chunk.js",
+    "static/js/876.3db48eab.chunk.js": "/static/js/876.3db48eab.chunk.js",
     "static/media/GithubFinder.jpeg": "/static/media/GithubFinder.de3d5c0cc317f6b5b83d.jpeg",
     "static/media/TheMealHub.jpeg": "/static/media/TheMealHub.c819f1c2c989987bcf84.jpeg",
     "index.html": "/index.html",
-    "main.a3129aac.js.map": "/static/js/main.a3129aac.js.map"
+    "main.f1391968.js.map": "/static/js/main.f1391968.js.map",
+    "211.72230471.chunk.js.map": "/static/js/211.72230471.chunk.js.map",
+    "31.1dc61096.chunk.js.map": "/static/js/31.1dc61096.chunk.js.map",
+    "182.dcf48098.chunk.js.map": "/static/js/182.dcf48098.chunk.js.map",
+    "956.48ff8d72.chunk.js.map": "/static/js/956.48ff8d72.chunk.js.map",
+    "895.34f8eb4b.chunk.js.map": "/static/js/895.34f8eb4b.chunk.js.map",
+    "672.0d3f973b.chunk.js.map": "/static/js/672.0d3f973b.chunk.js.map",
+    "501.2e8dc763.chunk.js.map": "/static/js/501.2e8dc763.chunk.js.map",
+    "876.3db48eab.chunk.js.map": "/static/js/876.3db48eab.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a3129aac.js"
+    "static/js/main.f1391968.js"
   ]
 }
