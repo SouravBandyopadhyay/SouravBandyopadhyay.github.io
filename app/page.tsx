@@ -9,13 +9,15 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import DockDemo from './lol';
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <DockDemo />
+    <div className="relative flex flex-col min-h-screen">
+      <DockDemo/>
       <HeroSection />
       <AboutSection />
+      <WorkExperienceSection/>
       <ProjectsSection />
       <ResumeSection />
       <ProfilesSection />
@@ -319,3 +321,60 @@ function Footer() {
     </footer>
   );
 }
+
+
+function WorkExperienceSection() {
+  return (
+    <section id="work-experience" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      <div className="container px-4 md:px-6 flex flex-col items-center justify-center space-y-8">
+        <div className="space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter">Work Experience</h2>
+          <p className="max-w-[700px] text-muted-foreground">
+            Here is an overview of my professional journey, highlighting the key roles and responsibilities I've undertaken.
+          </p>
+        </div>
+        <div className="flex flex-col space-y-8">
+          <WorkExperienceItem
+            companyName="Tech Innovators Inc."
+            position="Software Developer"
+            period="Jan 2022 - Present"
+            responsibilities={[
+              "Developing and maintaining web applications using React and Node.js.",
+              "Collaborating with cross-functional teams to define, design, and ship new features.",
+              "Implementing responsive UI/UX designs and ensuring optimal performance.",
+            ]}
+          />
+          <WorkExperienceItem
+            companyName="Creative Solutions"
+            position="Junior Developer"
+            period="Jul 2021 - Dec 2021"
+            responsibilities={[
+              "Assisted in the development of client-side logic using JavaScript.",
+              "Contributed to the implementation of API integrations.",
+              "Participated in code reviews and team meetings to discuss project progress.",
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WorkExperienceItem({ companyName, position, period, responsibilities }) {
+  return (
+    <div className="space-y-2">
+      <h3 className="text-2xl font-semibold">{companyName}</h3>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-muted-foreground">
+        <span>{position}</span>
+        <span>{period}</span>
+      </div>
+      <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+        {responsibilities.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+

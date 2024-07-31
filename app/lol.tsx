@@ -12,7 +12,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { Dock, DockIcon } from '@/components/magicui/dock';
-import { ModeToggle } from '@/components/mode-toggle';
+// import { ModeToggle } from '@/components/mode-toggle';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -91,12 +91,9 @@ const DATA = {
   },
 };
 
-export function DockDemo() {
+export default function DockDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Dock
-      </span>
+   
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
@@ -141,7 +138,7 @@ export function DockDemo() {
             </DockIcon>
           ))}
           <Separator orientation="vertical" className="h-full py-2" />
-          <DockIcon>
+          {/* <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
                 <ModeToggle className="rounded-full" />
@@ -150,9 +147,9 @@ export function DockDemo() {
                 <p>Theme</p>
               </TooltipContent>
             </Tooltip>
-          </DockIcon>
+          </DockIcon> */}
         </Dock>
       </TooltipProvider>
-    </div>
+
   );
 }
