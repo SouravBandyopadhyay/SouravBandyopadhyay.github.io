@@ -1,18 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from 'lucide-react';
+import React from "react";
+import Link from "next/link";
+import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
 
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { Dock, DockIcon } from '@/components/magicui/dock';
-// import { ModeToggle } from '@/components/mode-toggle';
+} from "@/components/ui/tooltip";
+import { Dock, DockIcon } from "@/components/magicui/dock";
+// import { ModeToggle } from "@/components/mode-toggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -62,29 +62,29 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: '#', icon: HomeIcon, label: 'Home' },
-    { href: '#', icon: PencilIcon, label: 'Blog' },
+    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "#", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
       GitHub: {
-        name: 'GitHub',
-        url: '#',
+        name: "GitHub",
+        url: "#",
         icon: Icons.github,
       },
       LinkedIn: {
-        name: 'LinkedIn',
-        url: '#',
+        name: "LinkedIn",
+        url: "#",
         icon: Icons.linkedin,
       },
       X: {
-        name: 'X',
-        url: '#',
+        name: "X",
+        url: "#",
         icon: Icons.x,
       },
       email: {
-        name: 'Send Email',
-        url: '#',
+        name: "Send Email",
+        url: "#",
         icon: Icons.email,
       },
     },
@@ -93,7 +93,10 @@ const DATA = {
 
 export default function DockDemo() {
   return (
-   
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+        Dock
+      </span>
       <TooltipProvider>
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
@@ -103,8 +106,8 @@ export default function DockDemo() {
                   <Link
                     href={item.href}
                     className={cn(
-                      buttonVariants({ variant: 'ghost', size: 'icon' }),
-                      'size-12 rounded-full'
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full",
                     )}
                   >
                     <item.icon className="size-4" />
@@ -124,8 +127,8 @@ export default function DockDemo() {
                   <Link
                     href={social.url}
                     className={cn(
-                      buttonVariants({ variant: 'ghost', size: 'icon' }),
-                      'size-12 rounded-full'
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full",
                     )}
                   >
                     <social.icon className="size-4" />
@@ -150,6 +153,6 @@ export default function DockDemo() {
           </DockIcon> */}
         </Dock>
       </TooltipProvider>
-
+    </div>
   );
 }

@@ -9,21 +9,25 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import BlurFade from "@/components/magicui/blur-fade";
 import DockDemo from './lol';
+import Image from 'next/image';
+import { FaGithub } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 
 export default function Portfolio() {
   return (
-    <div className="relative flex flex-col min-h-screen">
-      <DockDemo/>
+    <>
       <HeroSection />
       <AboutSection />
-      <WorkExperienceSection/>
+      <WorkExperienceSection />
       <ProjectsSection />
       <ResumeSection />
       <ProfilesSection />
       <ContactSection />
       <Footer />
-    </div>
+      {/* <DockDemo />  */}
+    </>
   );
 }
 
@@ -31,13 +35,18 @@ function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe]">
       <div className="container px-4 md:px-6 flex flex-col items-center justify-center text-center space-y-6">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-foreground">
-          Hi, I am Sourav Bandyopadhyay
-        </h1>
-        <p className="max-w-[700px] text-lg text-primary-foreground">
-          As a software developer, I'm excited to showcase my skills, projects,
-          and journey in the tech industry.
-        </p>
+
+        <BlurFade delay={0.25} inView>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-foreground">
+            Hi, I am Sourav Bandyopadhyay
+          </h1>
+        </BlurFade>
+        <BlurFade delay={0.75} inView>
+          <p className="max-w-[700px] text-lg text-primary-foreground">
+            As a software developer, I'm excited to showcase my skills, projects,
+            and journey in the tech industry.
+          </p>
+        </BlurFade >
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             target="_blank"
@@ -122,62 +131,65 @@ function ProjectsSection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
-            title="Project 1"
-            description="A web application that helps users manage their daily tasks and to-do lists."
-            tech="React, Node.js, MongoDB"
-            liveDemoLink="#"
-            repoLink="#"
+            title="TheMealHub"
+            description="TheMealHub is an Online Food Recipe website where you can search your favorite food according to your taste."
+            techStack={["React", "Chakra UI"]}
+            imageSrc={'/TheMealHub.jpeg'}
+            liveDemoLink="https://superlative-tapioca-85f901.netlify.app/"
+            repoLink="https://github.com/SouravBandyopadhyay/TheMealHub"
           />
-          <ProjectCard
-            title="Project 2"
-            description="A mobile app that helps users track their fitness goals and activities."
-            tech="React Native, Firebase"
-            liveDemoLink="#"
-            repoLink="#"
-          />
-          <ProjectCard
-            title="Project 3"
-            description="A web application that allows users to search and book vacation rentals."
-            tech="React, Node.js, PostgreSQL"
-            liveDemoLink="#"
-            repoLink="#"
-          />
+
         </div>
       </div>
     </section>
   );
 }
 
-function ProjectCard({ title, description, tech, liveDemoLink, repoLink }) {
+function ProjectCard({ title, description, techStack, imageSrc, liveDemoLink, repoLink }) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
+    <Card className="shadow-lg rounded-lg overflow-hidden">
+      <CardHeader >
+        <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            {/* <CodeIcon className="w-5 h-5 text-muted-foreground" /> */}
-            <span className="text-muted-foreground">{tech}</span>
+      <CardContent className="p-4">
+        <div className="flex flex-col gap-4">
+          <Image
+            src={imageSrc}
+            alt={`${title} project image`}
+            width={500}
+            height={300}
+            className="rounded-md"
+          />
+          <div className="flex flex-wrap gap-2">
+            {techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-semibold"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
-          <div className="flex items-center gap-2">
-            {/* <LinkIcon className="w-5 h-5 text-muted-foreground" /> */}
+          <div className="flex justify-between mt-4">
             <Link
               href={liveDemoLink}
-              className="text-muted-foreground hover:underline"
+              className="flex items-center text-blue-600 hover:underline"
               prefetch={false}
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              <TbWorld className="h-5 w-5 mr-1" />
               Live Demo
             </Link>
-          </div>
-          <div className="flex items-center gap-2">
-            {/* <GitlabIcon className="w-5 h-5 text-muted-foreground" /> */}
             <Link
               href={repoLink}
-              className="text-muted-foreground hover:underline"
+              className="flex items-center text-blue-600 hover:underline"
               prefetch={false}
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              <FaGithub className="h-5 w-5 mr-1" />
               GitHub Repository
             </Link>
           </div>
@@ -335,23 +347,14 @@ function WorkExperienceSection() {
         </div>
         <div className="flex flex-col space-y-8">
           <WorkExperienceItem
-            companyName="Tech Innovators Inc."
+            companyName="Detroit Software Consultant India Pvt Ltd."
             position="Software Developer"
-            period="Jan 2022 - Present"
+            period="April 2023 - Present"
             responsibilities={[
               "Developing and maintaining web applications using React and Node.js.",
-              "Collaborating with cross-functional teams to define, design, and ship new features.",
+              "Collaborating with cross-functional around the globe on day-to-day teams to define, design, and ship new features.",
               "Implementing responsive UI/UX designs and ensuring optimal performance.",
-            ]}
-          />
-          <WorkExperienceItem
-            companyName="Creative Solutions"
-            position="Junior Developer"
-            period="Jul 2021 - Dec 2021"
-            responsibilities={[
-              "Assisted in the development of client-side logic using JavaScript.",
-              "Contributed to the implementation of API integrations.",
-              "Participated in code reviews and team meetings to discuss project progress.",
+              "Responsible for building POCs and microservices for clients and internal use",
             ]}
           />
         </div>
@@ -378,3 +381,21 @@ function WorkExperienceItem({ companyName, position, period, responsibilities })
 }
 
 
+
+
+export function BlurFadeTextDemo() {
+  return (
+    <section id="header">
+      <BlurFade delay={0.25} inView>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+          Hello World 👋
+        </h2>
+      </BlurFade>
+      <BlurFade delay={0.25 * 2} inView>
+        <span className="text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none">
+          Nice to meet you
+        </span>
+      </BlurFade>
+    </section>
+  );
+}
