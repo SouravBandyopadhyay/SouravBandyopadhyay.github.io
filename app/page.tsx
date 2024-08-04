@@ -10,24 +10,24 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import BlurFade from "@/components/magicui/blur-fade";
-import DockDemo from './lol';
 import Image from 'next/image';
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 
 export default function Portfolio() {
-  return (
-    <>
-      <HeroSection />
-      <AboutSection />
-      <WorkExperienceSection />
-      <ProjectsSection />
-      <ResumeSection />
-      <ProfilesSection />
-      <ContactSection />
-      <Footer />
-      {/* <DockDemo />  */}
-    </>
+  return (<>
+
+    <HeroSection />
+    <AboutSection />
+    <WorkExperienceSection />
+    <ProjectsSection />
+    <ResumeSection />
+    <ProfilesSection />
+    <ContactSection />
+    <Footer />
+
+
+  </>
   );
 }
 
