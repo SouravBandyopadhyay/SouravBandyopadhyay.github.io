@@ -22,7 +22,6 @@ export default function Portfolio() {
     <WorkExperienceSection />
     <ProjectsSection />
     <ResumeSection />
-    <ProfilesSection />
     <ContactSection />
     <Footer />
 
@@ -218,57 +217,6 @@ function ResumeSection() {
         </Link>
       </div>
     </section>
-  );
-}
-
-function ProfilesSection() {
-  return (
-    <section id="profiles" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-      <div className="container px-4 md:px-6 flex flex-col items-center justify-center space-y-6">
-        <h2 className="text-3xl font-bold tracking-tighter">My Profiles</h2>
-        <p className="max-w-[700px] text-muted-foreground">
-          Check out my profiles on Leetcode, Hashnode, and other coding
-          platforms.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ProfileCard
-            title="Leetcode"
-            description="View my Leetcode profile and coding solutions."
-            link="#"
-          />
-          <ProfileCard
-            title="Hashnode"
-            description="Read my blog posts and articles on Hashnode."
-            link="#"
-          />
-          <ProfileCard
-            title="LinkedIn"
-            description="Connect with me on LinkedIn and view my professional profile."
-            link="#"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ProfileCard({ title, description, link }) {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Link
-          href={link}
-          className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-          prefetch={false}
-        >
-          Visit Profile
-        </Link>
-      </CardContent>
-    </Card>
   );
 }
 

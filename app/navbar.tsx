@@ -13,6 +13,7 @@ import {
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import {FaLinkedin,FaGithub} from "react-icons/fa"
+import { SiLeetcode } from "react-icons/si";
 // import { ModeToggle } from "@/components/mode-toggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
@@ -48,6 +49,9 @@ const Icons = {
   github: (props: IconProps) => (
     <FaGithub {...props} className="h-6 w-6"/>
   ),
+  leetcode: (props: IconProps) => (
+    <SiLeetcode {...props} className="h-6 w-6"/>
+  ),
 };
 
 
@@ -73,6 +77,11 @@ const DATA = {
       //   url: "#",
       //   icon: Icons.x,
       // },
+       leetcode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/u/Sourav_280598/",
+        icon: Icons.leetcode,
+      },
       email: {
         name: "Send Email",
         url: "mailto:souravb.1998@gmail.com",
@@ -117,6 +126,7 @@ export default function DockDemo() {
               <TooltipTrigger asChild>
                 <Link
                   href={social.url}
+                  target="_blank"
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-8 rounded-full"
