@@ -11,8 +11,15 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import BlurFade from "@/components/magicui/blur-fade";
 import Image from 'next/image';
-import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
+
+import { IoLogoDocker } from "react-icons/io5";
+
+import { SiFastapi, SiDjango, SiNextdotjs } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaAws, FaGithub, FaPython, } from 'react-icons/fa';
+
+
 
 export default function Portfolio() {
   return (<>
@@ -20,6 +27,7 @@ export default function Portfolio() {
     <HeroSection />
     <AboutSection />
     <WorkExperienceSection />
+    <Skills />
     <ProjectsSection />
     <ContactSection />
     <Footer />
@@ -87,19 +95,22 @@ function AboutSection() {
             always eager to learn new technologies and frameworks to stay
             up-to-date with the latest industry trends.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <SkillCard title="Languages" skills="JavaScript, Python, Java" />
-            <SkillCard title="Frameworks" skills="React, Node.js, Django" />
-            <SkillCard title="Tools" skills="Git, GitHub, VS Code" />
-          </div>
         </div>
         <div className="flex-1">
+          {/* <figure className="relative max-w-lg  mx-auto transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+
+            <img className="rounded-lg" src="/profile_img.jpg" alt="profile_image" />
+
+            <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>Sourav Bandyopadhyay</p>
+            </figcaption>
+          </figure> */}
           <img
-            src="/placeholder.svg"
+            src="/profile_img.jpg"
             width="500"
             height="500"
-            alt="About"
-            className="mx-auto rounded-lg object-cover"
+            alt="profile_image"
+            className="mx-auto rounded-full w-96 h-96 object-cover" 
           />
         </div>
       </div>
@@ -118,7 +129,7 @@ function SkillCard({ title, skills }) {
 
 function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 ">
+    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
       <div className="container px-4 md:px-6 flex flex-col items-center justify-center space-y-8">
         <div className="space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter">My Projects</h2>
@@ -321,6 +332,48 @@ export function BlurFadeTextDemo() {
           Nice to meet you
         </span>
       </BlurFade>
+    </section>
+  );
+}
+
+const skills = [
+  { name: 'HTML', icon: FaHtml5 },
+  { name: 'CSS', icon: FaCss3Alt },
+  { name: 'JavaScript', icon: FaJs },
+  { name: 'React', icon: FaReact },
+  { name: 'NextJS', icon: SiNextdotjs },
+  { name: 'Node.js', icon: FaNodeJs },
+  { name: 'Python', icon: FaPython },
+  { name: 'Django', icon: SiDjango },
+  { name: 'Fastapi', icon: SiFastapi },
+  { name: 'Docker', icon: IoLogoDocker },
+  { name: 'AWS', icon: FaAws },
+  { name: 'Mysql', icon: DiMysql },
+
+];
+
+export function Skills() {
+  return (
+    <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container max-w-6xl px-4 md:px-6">
+        <div className="space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Skills</h2>
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            I'm proficient in a wide range of languages and frameworks, constantly expanding my skillset to deliver
+            top-notch solutions.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-8 mt-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {skills.map((skill) => (
+            <div key={skill.name} className="flex flex-col items-center gap-2">
+              <div className="bg-muted rounded-full w-16 h-16 flex items-center justify-center">
+                <skill.icon className="w-8 h-8 text-primary" />
+              </div>
+              <span className="text-sm font-medium">{skill.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
