@@ -14,6 +14,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import {FaLinkedin,FaGithub} from "react-icons/fa"
 import { SiLeetcode } from "react-icons/si";
+import { MdDesignServices } from "react-icons/md";
 // import { ModeToggle } from "@/components/mode-toggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
@@ -52,6 +53,9 @@ const Icons = {
   leetcode: (props: IconProps) => (
     <SiLeetcode {...props} className="h-6 w-6"/>
   ),
+  uiverse: (props: IconProps) => (
+    <MdDesignServices {...props} className="h-6 w-6"/>
+  ),
 };
 
 
@@ -81,6 +85,11 @@ const DATA = {
         name: "LeetCode",
         url: "https://leetcode.com/u/Sourav_280598/",
         icon: Icons.leetcode,
+      },
+      uiverse: {
+        name: "UiVerse",
+        url: "https://uiverse.io/profile/SouravBandyopadhyay",
+        icon: Icons.uiverse,
       },
       email: {
         name: "Send Email",

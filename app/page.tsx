@@ -6,9 +6,6 @@ import {
   CardDescription,
   CardContent,
 } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
 import BlurFade from "@/components/magicui/blur-fade";
 import Image from 'next/image';
 import { TbWorld } from "react-icons/tb";
@@ -18,12 +15,13 @@ import { IoLogoDocker } from "react-icons/io5";
 import { SiFastapi, SiDjango, SiNextdotjs } from "react-icons/si";
 import { DiMysql } from "react-icons/di";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaAws, FaGithub, FaPython, } from 'react-icons/fa';
+import ContactSection from './ContactForm';
 
 
 
 export default function Portfolio() {
-  return (<>
 
+  return (<>
     <HeroSection />
     <AboutSection />
     <WorkExperienceSection />
@@ -47,12 +45,13 @@ function HeroSection() {
             Hi, I am Sourav Bandyopadhyay
           </h1>
         </BlurFade>
-        <BlurFade delay={0.75} inView>
+        <BlurFade delay={0.5} inView>
           <p className="max-w-[700px] text-lg text-primary-foreground">
             As a software developer, I'm excited to showcase my skills, projects,
             and journey in the tech industry.
           </p>
         </BlurFade >
+        <BlurFade delay={0.75} inView>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             target="_blank"
@@ -70,6 +69,7 @@ function HeroSection() {
             Contact Me
           </Link>
         </div>
+        </BlurFade >
       </div>
     </section>
   );
@@ -118,15 +118,6 @@ function AboutSection() {
   );
 }
 
-function SkillCard({ title, skills }) {
-  return (
-    <div className="bg-muted rounded-lg p-4 text-center">
-      <h3 className="text-xl font-bold">{title}</h3>
-      <p className="text-muted-foreground">{skills}</p>
-    </div>
-  );
-}
-
 function ProjectsSection() {
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
@@ -147,7 +138,22 @@ function ProjectsSection() {
             liveDemoLink="https://superlative-tapioca-85f901.netlify.app/"
             repoLink="https://github.com/SouravBandyopadhyay/TheMealHub"
           />
-
+           <ProjectCard
+            title="Next-Auth-Role-Based"
+            description="Role Based Authentication in NextJS with OAuth Support"
+            techStack={["NextJS","Next-Auth", "TailWind CSS"]}
+            imageSrc={'/TheMealHub.jpeg'}
+            liveDemoLink="https://next-role-based-auth-one.vercel.app/"
+            repoLink="https://github.com/SouravBandyopadhyay/next-role-based-auth"
+          />
+          <ProjectCard
+            title="CodeQuest"
+            description="Technical Interview guide comprehensive preparation."
+            techStack={["VitePress","CSS","MarkDown"]}
+            imageSrc={'/TheMealHub.jpeg'}
+            liveDemoLink="https://code-quest-dev.vercel.app/"
+            repoLink="https://github.com/SouravBandyopadhyay/codeQuest.dev"
+          />
         </div>
       </div>
     </section>
@@ -208,39 +214,7 @@ function ProjectCard({ title, description, techStack, imageSrc, liveDemoLink, re
   );
 }
 
-function ContactSection() {
-  return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-      <div className="container px-4 md:px-6 flex flex-col items-center justify-center space-y-6">
-        <h2 className="text-3xl font-bold tracking-tighter">Get in Touch</h2>
-        <p className="max-w-[700px] text-muted-foreground">
-          If you'd like to work together or have any questions, feel free to
-          reach out to me using the contact form below.
-        </p>
-        <form className="w-full max-w-lg space-y-4">
-          <Input
-            type="text"
-            placeholder="Your Name"
-            className="w-full border border-input bg-background px-4 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          />
-          <Input
-            type="email"
-            placeholder="Your Email"
-            className="w-full border border-input bg-background px-4 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          />
-          <Textarea
-            placeholder="Your Message"
-            className="w-full border border-input bg-background px-4 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-            rows={5}
-          />
-          <Button type="submit" className="w-full">
-            Send Message
-          </Button>
-        </form>
-      </div>
-    </section>
-  );
-}
+
 
 function Footer() {
   return (
