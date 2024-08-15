@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, LucideProps, MailIcon, PencilIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -15,45 +15,24 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 import {FaLinkedin,FaGithub} from "react-icons/fa"
 import { SiLeetcode } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
+import { IconBaseProps } from "react-icons/lib";
 // import { ModeToggle } from "@/components/mode-toggle";
 
-export type IconProps = React.HTMLAttributes<SVGElement>;
+// export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  calendar: (props: IconProps) => <CalendarIcon {...props} />,
-  email: (props: IconProps) => <MailIcon {...props} />,
-  linkedin: (props: IconProps) => (
+  calendar: (props: React.JSX.IntrinsicAttributes & Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>) => <CalendarIcon {...props} />,
+  email: (props: React.JSX.IntrinsicAttributes & Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>) => <MailIcon {...props} />,
+  linkedin: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <FaLinkedin {...props} className="h-6 w-6"/>
   ),
-  x: (props: IconProps) => (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <title>X</title>
-      <path
-        fill="currentColor"
-        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-      />
-    </svg>
-  ),
-  youtube: (props: IconProps) => (
-    <svg
-      width="32px"
-      height="32px"
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <title>youtube</title>
-      <path d="M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z" />
-    </svg>
-  ),
-  github: (props: IconProps) => (
+  github: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <FaGithub {...props} className="h-6 w-6"/>
   ),
-  leetcode: (props: IconProps) => (
+  leetcode: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <SiLeetcode {...props} className="h-6 w-6"/>
   ),
-  uiverse: (props: IconProps) => (
+  uiverse: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <MdDesignServices {...props} className="h-6 w-6"/>
   ),
 };
@@ -62,7 +41,7 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    // { href: "#", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
