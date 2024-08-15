@@ -51,7 +51,7 @@ function HeroSection() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <p className="max-w-[700px] text-lg text-primary-foreground">
-            As a software developer, I'm excited to showcase my skills,
+            As a software developer, I&apos;m excited to showcase my skills,
             projects, and journey in the tech industry.
           </p>
         </BlurFade>
@@ -257,7 +257,7 @@ function WorkExperienceSection() {
           </h2>
           <p className="max-w-[700px] text-muted-foreground">
             Here is an overview of my professional journey, highlighting the key
-            roles and responsibilities I've undertaken.
+            roles and responsibilities I&apos;ve undertaken.
           </p>
         </div>
         <div className="flex flex-col space-y-8">
@@ -341,7 +341,7 @@ export function Skills() {
             My Skills
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I'm proficient in a wide range of languages and frameworks,
+            I&apos;m proficient in a wide range of languages and frameworks,
             constantly expanding my skillset to deliver top-notch solutions.
           </p>
         </div>
