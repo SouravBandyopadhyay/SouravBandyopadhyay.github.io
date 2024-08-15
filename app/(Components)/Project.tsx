@@ -27,7 +27,7 @@ export default function ProjectsSection() {
             title="TheMealHub"
             description="TheMealHub is an Online Food Recipe website where you can search your favorite food according to your taste."
             techStack={["React", "Chakra UI"]}
-            imageSrc={"./TheMealHub.jpeg"}
+            imageSrc={"/TheMealHub.jpeg"}
             liveDemoLink="https://superlative-tapioca-85f901.netlify.app/"
             repoLink="https://github.com/SouravBandyopadhyay/TheMealHub"
           />
@@ -35,7 +35,7 @@ export default function ProjectsSection() {
             title="Next-Auth-Role-Based"
             description="Role Based Authentication in NextJS with OAuth Support"
             techStack={["NextJS", "Next-Auth", "TailWind CSS"]}
-            imageSrc={"./TheMealHub.jpeg"}
+            imageSrc={"/TheMealHub.jpeg"}
             liveDemoLink="https://next-role-based-auth-one.vercel.app/"
             repoLink="https://github.com/SouravBandyopadhyay/next-role-based-auth"
           />
@@ -43,7 +43,7 @@ export default function ProjectsSection() {
             title="CodeQuest"
             description="Technical Interview guide comprehensive preparation."
             techStack={["VitePress", "CSS", "MarkDown"]}
-            imageSrc={"./TheMealHub.jpeg"}
+            imageSrc={"/TheMealHub.jpeg"}
             liveDemoLink="https://code-quest-dev.vercel.app/"
             repoLink="https://github.com/SouravBandyopadhyay/codeQuest.dev"
           />

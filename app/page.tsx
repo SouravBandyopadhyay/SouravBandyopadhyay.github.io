@@ -77,7 +77,7 @@ function AboutSection() {
           </p>
         </div>
         <Image
-          src="./profile_img.jpg"
+          src="/profile_img.jpg"
           width="500"
           height="500"
           alt="profile_image"
