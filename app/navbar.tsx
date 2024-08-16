@@ -1,6 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, LucideProps, MailIcon, PencilIcon } from "lucide-react";
+import {
+  CalendarIcon,
+  HomeIcon,
+  LucideProps,
+  MailIcon,
+  PencilIcon,
+} from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,7 +18,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import {FaLinkedin,FaGithub} from "react-icons/fa"
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 import { IconBaseProps } from "react-icons/lib";
@@ -21,22 +27,29 @@ import { IconBaseProps } from "react-icons/lib";
 // export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  calendar: (props: React.JSX.IntrinsicAttributes & Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>) => <CalendarIcon {...props} />,
-  email: (props: React.JSX.IntrinsicAttributes & Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>) => <MailIcon {...props} />,
+  calendar: (
+    props: React.JSX.IntrinsicAttributes &
+      Omit<LucideProps, "ref"> &
+      React.RefAttributes<SVGSVGElement>
+  ) => <CalendarIcon {...props} />,
+  email: (
+    props: React.JSX.IntrinsicAttributes &
+      Omit<LucideProps, "ref"> &
+      React.RefAttributes<SVGSVGElement>
+  ) => <MailIcon {...props} />,
   linkedin: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
-    <FaLinkedin {...props} className="h-6 w-6"/>
+    <FaLinkedin {...props} className="h-6 w-6" />
   ),
   github: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
-    <FaGithub {...props} className="h-6 w-6"/>
+    <FaGithub {...props} className="h-6 w-6" />
   ),
   leetcode: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
-    <SiLeetcode {...props} className="h-6 w-6"/>
+    <SiLeetcode {...props} className="h-6 w-6" />
   ),
   uiverse: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
-    <MdDesignServices {...props} className="h-6 w-6"/>
+    <MdDesignServices {...props} className="h-6 w-6" />
   ),
 };
-
 
 const DATA = {
   navbar: [
@@ -60,7 +73,7 @@ const DATA = {
       //   url: "#",
       //   icon: Icons.x,
       // },
-       leetcode: {
+      leetcode: {
         name: "LeetCode",
         url: "https://leetcode.com/u/Sourav_280598/",
         icon: Icons.leetcode,
@@ -108,7 +121,6 @@ export default function DockDemo() {
         <Separator orientation="vertical" className="h-full" />
 
         {Object.entries(DATA.contact.social).map(([name, social]) => (
-
           <DockIcon key={name}>
             <Tooltip>
               <TooltipTrigger asChild>

@@ -1,20 +1,6 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { TbWorld } from "react-icons/tb";
-import { IoLogoDocker } from "react-icons/io5";
-import { SiFastapi, SiDjango, SiNextdotjs } from "react-icons/si";
-import { DiMysql } from "react-icons/di";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaAws,
-  FaGithub,
-  FaPython,
-} from "react-icons/fa";
 import ContactSection from "./ContactForm";
 import WorkExperienceSection from "./(Components)/WorkExperience";
 import { Skills } from "./(Components)/Skills";

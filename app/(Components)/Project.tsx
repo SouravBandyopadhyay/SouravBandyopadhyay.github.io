@@ -25,7 +25,7 @@ export default function ProjectsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
             title="TheMealHub"
-            description="TheMealHub is an Online Food Recipe website where you can search your favorite food according to your taste."
+            description="TheMealHub is an Online Food Recipe website."
             techStack={["React", "Chakra UI"]}
             imageSrc={"/TheMealHub.jpeg"}
             liveDemoLink="https://superlative-tapioca-85f901.netlify.app/"
@@ -35,7 +35,7 @@ export default function ProjectsSection() {
             title="Next-Auth-Role-Based"
             description="Role Based Authentication in NextJS with OAuth Support"
             techStack={["NextJS", "Next-Auth", "TailWind CSS"]}
-            imageSrc={"/TheMealHub.jpeg"}
+            imageSrc={"/next-auth.jpeg"}
             liveDemoLink="https://next-role-based-auth-one.vercel.app/"
             repoLink="https://github.com/SouravBandyopadhyay/next-role-based-auth"
           />
@@ -43,7 +43,7 @@ export default function ProjectsSection() {
             title="CodeQuest"
             description="Technical Interview guide comprehensive preparation."
             techStack={["VitePress", "CSS", "MarkDown"]}
-            imageSrc={"/TheMealHub.jpeg"}
+            imageSrc={"/code-quest.jpeg"}
             liveDemoLink="https://code-quest-dev.vercel.app/"
             repoLink="https://github.com/SouravBandyopadhyay/codeQuest.dev"
           />
@@ -83,7 +83,8 @@ function ProjectCard({
             alt={`${title} project image`}
             width={500}
             height={300}
-            className="rounded-md"
+            loading="lazy"
+            className="w-full h-[300px] rounded-md object-cover"
           />
           <div className="flex flex-wrap gap-2">
             {techStack.map((tech, index) => (
@@ -98,22 +99,22 @@ function ProjectCard({
           <div className="flex justify-between mt-4">
             <Link
               href={liveDemoLink}
-              className="flex items-center text-blue-600 hover:underline"
+              className="inline-flex items-center text-gray-800 hover:text-blue-500 transition-colors"
               prefetch={false}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <TbWorld className="h-5 w-5 mr-1" />
+              <TbWorld className="h-5 w-5 mr-2" />
               Live Demo
             </Link>
             <Link
               href={repoLink}
-              className="flex items-center text-blue-600 hover:underline"
+              className="inline-flex items-center text-gray-800 hover:text-blue-500 transition-colors"
               prefetch={false}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="h-5 w-5 mr-1" />
+              <FaGithub className="h-5 w-5 mr-2" />
               GitHub Repository
             </Link>
           </div>
