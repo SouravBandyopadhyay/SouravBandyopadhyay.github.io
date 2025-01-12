@@ -19,7 +19,7 @@ import {
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode,SiSubstack  } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 import { IconBaseProps } from "react-icons/lib";
 // import { ModeToggle } from "@/components/mode-toggle";
@@ -49,6 +49,9 @@ const Icons = {
   uiverse: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <MdDesignServices {...props} className="h-6 w-6" />
   ),
+    substack: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
+    <SiSubstack {...props} className="h-6 w-6" />
+  ),
 };
 
 const DATA = {
@@ -62,6 +65,11 @@ const DATA = {
         name: "GitHub",
         url: "https://github.com/SouravBandyopadhyay",
         icon: Icons.github,
+      },
+      Substack:{
+        name: "Substack",
+        url: "https://souravbandyopadhyay.substack.com/",
+        icon: Icons.substack,
       },
       LinkedIn: {
         name: "LinkedIn",
