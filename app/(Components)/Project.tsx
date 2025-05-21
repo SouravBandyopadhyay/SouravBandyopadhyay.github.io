@@ -47,6 +47,14 @@ export default function ProjectsSection() {
             liveDemoLink="https://code-quest-dev.vercel.app/"
             repoLink="https://github.com/SouravBandyopadhyay/codeQuest.dev"
           />
+          <ProjectCard
+            title="Link-Trim"
+            description="A simple and efficient Production ready URL shortener."
+            techStack={["NextJS", "Prisma", "MongoDB"]}
+            imageSrc={"/link-trim.jpeg"}
+            liveDemoLink="https://link-trim.in"
+            repoLink="#"
+          />
         </div>
       </div>
     </section>
