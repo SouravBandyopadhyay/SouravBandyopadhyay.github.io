@@ -48,7 +48,7 @@ function AboutSection() {
         <div className="flex-1 space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter">About Me</h2>
           <p className="text-lg text-muted-foreground">
-            As a Software Developer with One Year plus of experience, I have a
+            As a Software Developer with Two Year plus of experience, I have a
             strong passion for creating innovative and user-friendly
             applications. My journey in the tech industry began with development
             skills through Masai School, where I honed my skills in programming,
