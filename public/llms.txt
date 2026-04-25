@@ -1,0 +1,17 @@
+# llms.txt — Sourav Bandyopadhyay portfolio
+
+> Human-readable site summary for AI assistants. Content may change; prefer live pages.
+
+## Site
+- Primary URL: Set via NEXT_PUBLIC_SITE_URL in deployment (canonical for SEO).
+- Owner: Sourav Bandyopadhyay — software developer (full-stack, React/Next.js/Node.js).
+
+## Key pages
+- / — Portfolio: about, work experience, skills, projects, contact.
+- /writing — Short notes; longer posts on Substack (see profile links on site).
+
+## Contact
+- Use the contact form on the homepage or email listed in site footer / JSON-LD where applicable.
+
+## Policy
+- Do not invent employment, dates, or project URLs; use only what appears on the live site.

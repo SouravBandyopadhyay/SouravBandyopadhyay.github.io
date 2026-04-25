@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import {
-  CalendarIcon,
+  FolderKanban,
   HomeIcon,
   LucideProps,
   MailIcon,
-  PencilIcon,
+  User,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -19,19 +19,11 @@ import {
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiLeetcode,SiSubstack  } from "react-icons/si";
+import { SiLeetcode, SiSubstack } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 import { IconBaseProps } from "react-icons/lib";
-// import { ModeToggle } from "@/components/mode-toggle";
-
-// export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  calendar: (
-    props: React.JSX.IntrinsicAttributes &
-      Omit<LucideProps, "ref"> &
-      React.RefAttributes<SVGSVGElement>
-  ) => <CalendarIcon {...props} />,
   email: (
     props: React.JSX.IntrinsicAttributes &
       Omit<LucideProps, "ref"> &
@@ -49,15 +41,17 @@ const Icons = {
   uiverse: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <MdDesignServices {...props} className="h-6 w-6" />
   ),
-    substack: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
+  substack: (props: React.JSX.IntrinsicAttributes & IconBaseProps) => (
     <SiSubstack {...props} className="h-6 w-6" />
   ),
 };
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    // { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "/#top", icon: HomeIcon, label: "Home" },
+    { href: "/#about", icon: User, label: "About" },
+    { href: "/#projects", icon: FolderKanban, label: "Projects" },
+    { href: "/#contact", icon: MailIcon, label: "Contact" },
   ],
   contact: {
     social: {
@@ -66,7 +60,7 @@ const DATA = {
         url: "https://github.com/SouravBandyopadhyay",
         icon: Icons.github,
       },
-      Substack:{
+      Substack: {
         name: "Substack",
         url: "https://souravbandyopadhyay.substack.com/",
         icon: Icons.substack,
@@ -76,11 +70,6 @@ const DATA = {
         url: "https://www.linkedin.com/in/souravbandyopadhyay/",
         icon: Icons.linkedin,
       },
-      // X: {
-      //   name: "X",
-      //   url: "#",
-      //   icon: Icons.x,
-      // },
       leetcode: {
         name: "LeetCode",
         url: "https://leetcode.com/u/Sourav_280598/",
@@ -102,16 +91,17 @@ const DATA = {
 
 export default function DockDemo() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-10 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
+    <div className="pointer-events-none fixed inset-x-0 bottom-10 z-30 mx-auto mb-4 flex h-full max-h-14 origin-bottom">
+      <div className="fixed inset-x-0 bottom-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
 
-      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
+      <Dock className="pointer-events-auto relative z-50 mx-auto flex h-full min-h-full transform-gpu items-center bg-background px-1 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
         {DATA.navbar.map((item) => (
           <DockIcon key={item.label}>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
+                  aria-label={item.label}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12 rounded-full"
@@ -135,6 +125,16 @@ export default function DockDemo() {
                 <Link
                   href={social.url}
                   target="_blank"
+                  rel={
+                    social.url.startsWith("mailto:")
+                      ? undefined
+                      : "noopener noreferrer"
+                  }
+                  aria-label={
+                    social.url.startsWith("mailto:")
+                      ? social.name
+                      : `${social.name} (opens in new tab)`
+                  }
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-8 rounded-full"

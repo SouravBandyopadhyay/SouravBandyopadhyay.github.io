@@ -2,11 +2,15 @@ export default function WorkExperienceSection() {
   return (
     <section
       id="work-experience"
-      className="w-full py-12 md:py-24 lg:py-32 bg-muted"
+      className="w-full bg-muted py-12 md:py-24 lg:py-32"
+      aria-labelledby="work-heading"
     >
-      <div className="container px-4 md:px-6 flex flex-col items-center justify-center space-y-8">
+      <div className="container flex flex-col items-center justify-center space-y-8 px-4 md:px-6">
         <div className="space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter">
+          <h2
+            id="work-heading"
+            className="text-3xl font-bold tracking-tighter"
+          >
             Work Experience
           </h2>
           <p className="max-w-[700px] text-muted-foreground">

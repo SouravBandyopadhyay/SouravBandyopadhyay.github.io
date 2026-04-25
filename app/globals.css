@@ -30,9 +30,9 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    /* Fonts for Heading and body */
-    --font-sans: "Inter", sans-serif;
-    --font-heading: "Playfair Display", serif;
+    /* Stacks align with next/font in layout (Poppins / Merriweather CSS variables). */
+    --font-sans: ui-sans-serif, system-ui, sans-serif;
+    --font-heading: ui-serif, Georgia, serif;
   }
 
   .dark {
@@ -61,9 +61,9 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
-    /* Fonts for Heading and body */
-    --font-sans: "Inter", sans-serif;
-    --font-heading: "Playfair Display", serif;
+    /* Stacks align with next/font in layout (Poppins / Merriweather CSS variables). */
+    --font-sans: ui-sans-serif, system-ui, sans-serif;
+    --font-heading: ui-serif, Georgia, serif;
   }
 }
 

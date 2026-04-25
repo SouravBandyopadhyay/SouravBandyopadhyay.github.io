@@ -45,9 +45,15 @@ function ContactSection() {
   };
 
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6 flex flex-col items-center justify-center space-y-6">
-        <h2 className="text-3xl font-bold tracking-tighter">Get in Touch</h2>
+    <section
+      id="contact"
+      className="w-full py-12 md:py-24 lg:py-32"
+      aria-labelledby="contact-heading"
+    >
+      <div className="container flex flex-col items-center justify-center space-y-6 px-4 md:px-6">
+        <h2 id="contact-heading" className="text-3xl font-bold tracking-tighter">
+          Get in Touch
+        </h2>
         <p className="max-w-[700px] text-muted-foreground">
           If you&rsquo;d like to work together or have any questions, feel free to reach out to me using the contact form below.
         </p>
