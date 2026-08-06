@@ -4,6 +4,7 @@ import Image from "next/image";
 import WorkExperienceSection from "./(Components)/WorkExperience";
 import { Skills } from "./(Components)/Skills";
 import ProjectsSection from "./(Components)/Project";
+import { WritingSection } from "./(Components)/Writing";
 
 const ContactSection = dynamic(() => import("./ContactForm"), {
   loading: () => (
@@ -140,6 +141,7 @@ export default function Portfolio() {
       <WorkExperienceSection />
       <Skills />
       <ProjectsSection />
+      <WritingSection />
       <ContactSection />
       <Footer />
     </main>

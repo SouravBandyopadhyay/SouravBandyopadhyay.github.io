@@ -5,6 +5,7 @@ import {
   HomeIcon,
   LucideProps,
   MailIcon,
+  Pencil,
   User,
 } from "lucide-react";
 
@@ -51,6 +52,7 @@ const DATA = {
     { href: "/#top", icon: HomeIcon, label: "Home" },
     { href: "/#about", icon: User, label: "About" },
     { href: "/#projects", icon: FolderKanban, label: "Projects" },
+    { href: "/#writing", icon: Pencil, label: "Writing" },
     { href: "/#contact", icon: MailIcon, label: "Contact" },
   ],
   contact: {
@@ -61,8 +63,8 @@ const DATA = {
         icon: Icons.github,
       },
       Substack: {
-        name: "Substack",
-        url: "https://souravbandyopadhyay.substack.com/",
+        name: "Core Craft",
+        url: "https://corecraft.substack.com/",
         icon: Icons.substack,
       },
       LinkedIn: {

@@ -93,7 +93,7 @@ const jsonLdPerson = {
   sameAs: [
     "https://github.com/SouravBandyopadhyay",
     "https://www.linkedin.com/in/souravbandyopadhyay/",
-    "https://souravbandyopadhyay.substack.com/",
+    "https://corecraft.substack.com/",
     "https://leetcode.com/u/Sourav_280598/",
     "https://uiverse.io/profile/SouravBandyopadhyay",
   ],
