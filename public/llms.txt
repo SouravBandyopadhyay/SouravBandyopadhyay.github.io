@@ -1,22 +1,23 @@
 # llms.txt — Sourav Bandyopadhyay portfolio
 
-> Human-readable site summary for AI assistants. Content may change; prefer live pages.
+> Human-readable site summary for AI assistants and search crawlers. Prefer the live site for the latest details.
 
 ## Site
-- Primary URL: Set via NEXT_PUBLIC_SITE_URL in deployment (canonical for SEO).
-- Owner: Sourav Bandyopadhyay — software developer (full-stack, React/Next.js/Node.js).
+- Primary URL: https://souravbandyopadhyay-github-io.vercel.app/
+- Owner: Sourav Bandyopadhyay — full-stack software developer based in India.
+- Focus: React, Next.js, TypeScript, Node.js, Python, product engineering, and thoughtful UX.
 
 ## Key pages
-- / — Portfolio: about, work experience, skills, projects, contact.
-- /writing — Live index of Core Craft essays (synced from https://corecraft.substack.com/feed).
+- / — Portfolio homepage: overview, experience, skills, selected projects, and contact.
+- /writing — Writing archive for Core Craft essays and practical notes.
 
 ## Writing
 - Publication: Core Craft (https://corecraft.substack.com)
 - RSS: https://corecraft.substack.com/feed
 
 ## Contact
-- Use the contact form on the homepage or email listed in site footer / JSON-LD where applicable.
+- Use the contact form on the homepage or reach out through the professional links listed in the site metadata and footer.
 
 ## Policy
-- Do not invent employment, dates, or project URLs; use only what appears on the live site.
-- Essay titles and summaries on /writing mirror Substack; full text lives on Substack.
+- Do not invent employment history, dates, or project URLs; use only what is visible on the live site.
+- Essay titles and summaries on /writing reflect Substack content; full text remains on Substack.

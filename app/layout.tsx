@@ -1,9 +1,6 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import {
-  Poppins as FontPoppins,
-  Merriweather as FontHeading,
-} from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import DockDemo from "./navbar";
@@ -22,29 +19,30 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Sourav Bandyopadhyay | Software Developer Portfolio",
+  title: "Sourav Bandyopadhyay | Full-Stack Software Developer Portfolio",
   description:
-    "Explore the portfolio of Sourav Bandyopadhyay – a passionate software developer specializing in full-stack development, open-source contributions, and building high-performance web applications.",
+    "Portfolio of Sourav Bandyopadhyay, a full-stack software developer based in India building modern web products with React, Next.js, TypeScript, Node.js, and Python.",
   keywords: [
     "Sourav Bandyopadhyay",
-    "Portfolio",
-    "Software Developer",
+    "Software Developer Portfolio",
     "Full Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Web Developer",
-    "Open Source Contributor",
     "React Developer",
-    "Next.js Portfolio",
+    "Next.js Developer",
+    "Node.js Developer",
+    "TypeScript Developer",
+    "Python Developer",
+    "Frontend Developer",
+    "Web Developer India",
+    "Product Developer Portfolio",
   ],
   authors: [{ name: "Sourav Bandyopadhyay", url: siteUrl }],
   creator: "Sourav Bandyopadhyay",
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Sourav Bandyopadhyay | Software Developer Portfolio",
+    title: "Sourav Bandyopadhyay | Full-Stack Software Developer Portfolio",
     description:
-      "Check out the work and projects of Sourav Bandyopadhyay – a full-stack developer who loves clean code and modern tech.",
+      "Explore the work of Sourav Bandyopadhyay, a software developer creating thoughtful web products and polished user experiences.",
     url: siteUrl,
     siteName: "Sourav Bandyopadhyay Portfolio",
     locale: "en_US",
@@ -54,32 +52,39 @@ export const metadata: Metadata = {
         url: "/profile_img.jpg",
         width: 500,
         height: 500,
-        alt: "Sourav Bandyopadhyay",
+        alt: "Sourav Bandyopadhyay, full-stack software developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sourav Bandyopadhyay | Software Developer Portfolio",
+    title: "Sourav Bandyopadhyay | Full-Stack Software Developer Portfolio",
     description:
-      "Full-stack developer passionate about React, Node.js, and building digital products.",
+      "Full-stack software developer focused on React, Next.js, Node.js, and Python products with clear UX and thoughtful engineering.",
     creator: "@souravb_1998",
     images: ["/profile_img.jpg"],
   },
 };
 
-const fontSans = FontPoppins({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const fontHeading = FontHeading({
+const fontHeading = Inter({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["500", "600", "700"],
+});
+
+const fontMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+  weight: ["400", "500"],
 });
 
 const jsonLdPerson = {
@@ -120,7 +125,8 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased tracking-tight",
           fontSans.variable,
-          fontHeading.variable
+          fontHeading.variable,
+          fontMono.variable
         )}
       >
         <JsonLd data={[jsonLdPerson, jsonLdWebSite]} />

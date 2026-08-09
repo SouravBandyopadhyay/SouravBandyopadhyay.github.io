@@ -12,24 +12,15 @@ export async function WritingSection() {
   const preview = posts.slice(0, 3);
 
   return (
-    <section
-      id="writing"
-      className="relative w-full overflow-hidden bg-[#f5f5f7] py-16 md:py-24 lg:py-32 dark:bg-[#0b0b0d]"
-      aria-labelledby="writing-heading"
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,_rgba(180,200,220,0.35),_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(40,55,75,0.4),_transparent_70%)]"
-      />
+    <section id="writing" className="relative w-full overflow-hidden bg-white py-16 md:py-24 lg:py-32" aria-labelledby="writing-heading">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,_rgba(197,176,244,0.25),_transparent_70%)]" />
 
       <div className="container relative mx-auto max-w-6xl px-4 md:px-6">
         <div className="mx-auto mb-12 max-w-2xl space-y-4 text-center md:mb-16">
-          <p className="text-xs font-medium uppercase tracking-[0.22em] text-neutral-500 dark:text-neutral-400">
-            {SUBSTACK.name}
-          </p>
+          <p className="eyebrow">{SUBSTACK.name}</p>
           <h2
             id="writing-heading"
-            className="font-heading text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white md:text-5xl"
+            className="text-4xl font-semibold tracking-[-0.03em] text-black md:text-5xl"
           >
             Writing
           </h2>
@@ -47,7 +38,7 @@ export async function WritingSection() {
                 href={post.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-[1.5rem] bg-white/70 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_12px_40px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:bg-white/[0.06] dark:ring-white/10"
+                className="group flex flex-col overflow-hidden rounded-[1.5rem] border border-black/10 bg-[#f7f7f5] transition duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-neutral-900">
                   {post.image ? (
@@ -66,11 +57,11 @@ export async function WritingSection() {
                 <div className="flex flex-1 flex-col gap-3 p-5 md:p-6">
                   <time
                     dateTime={post.publishedAt}
-                    className="text-[11px] font-medium uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400"
+                    className="text-[11px] font-medium uppercase tracking-[0.16em] text-black/60"
                   >
                     {formatPostDate(post.publishedAt)}
                   </time>
-                  <h3 className="font-heading text-lg leading-snug tracking-tight text-neutral-900 transition-colors group-hover:text-neutral-600 dark:text-white dark:group-hover:text-neutral-200 md:text-xl">
+                  <h3 className="text-lg leading-snug tracking-[-0.02em] text-black transition-colors group-hover:text-black/70 md:text-xl">
                     {post.title}
                   </h3>
                   {post.summary ? (
@@ -78,7 +69,7 @@ export async function WritingSection() {
                       {post.summary}
                     </p>
                   ) : null}
-                  <span className="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium text-neutral-900 dark:text-white">
+                  <span className="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium text-black">
                     Read
                     <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
@@ -87,7 +78,7 @@ export async function WritingSection() {
             ))}
           </div>
         ) : (
-          <p className="text-center text-neutral-500 dark:text-neutral-400">
+          <p className="text-center text-black/70">
             Latest essays will appear here once the feed is available.
           </p>
         )}
@@ -95,7 +86,7 @@ export async function WritingSection() {
         <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
           <Link
             href="/writing"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 text-sm font-medium text-white transition hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+            className="pill-btn pill-btn-primary"
             prefetch={false}
           >
             View all writing
@@ -105,7 +96,7 @@ export async function WritingSection() {
             href={SUBSTACK.subscribeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 items-center justify-center rounded-full bg-white/70 px-8 text-sm font-medium text-neutral-900 ring-1 ring-black/5 backdrop-blur transition hover:bg-white dark:bg-white/10 dark:text-white dark:ring-white/10 dark:hover:bg-white/15"
+            className="pill-btn pill-btn-secondary"
           >
             Subscribe on Substack
           </a>

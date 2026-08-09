@@ -1,6 +1,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import WorkExperienceSection from "./(Components)/WorkExperience";
 import { Skills } from "./(Components)/Skills";
 import ProjectsSection from "./(Components)/Project";
@@ -25,42 +26,66 @@ const ContactSection = dynamic(() => import("./ContactForm"), {
 
 function HeroSection() {
   return (
-    <section
-      id="top"
-      className="w-full bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] py-12 md:py-24 lg:py-32"
-      aria-labelledby="hero-heading"
-    >
-      <div className="container flex flex-col items-center justify-center space-y-6 px-4 text-center md:px-6">
-        <h1
-          id="hero-heading"
-          className="text-4xl font-bold text-primary-foreground sm:text-5xl md:text-6xl"
-        >
-          Hi, I am Sourav Bandyopadhyay
-        </h1>
+    <section id="top" className="w-full bg-white py-12 md:py-24 lg:py-32" aria-labelledby="hero-heading">
+      <div className="container flex flex-col gap-8 px-4 md:px-6">
+        <div className="section-shell space-y-8">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl space-y-6">
+              <p className="eyebrow">Software Developer • India</p>
+              <h1
+                id="hero-heading"
+                className="text-5xl font-semibold tracking-[-0.04em] text-black sm:text-6xl lg:text-7xl"
+              >
+                I design and build full-stack web experiences that feel clear, fast, and genuinely useful.
+              </h1>
+              <p className="max-w-2xl text-lg leading-relaxed text-black/70 sm:text-xl">
+                I’m a software developer based in India focused on React, Next.js, TypeScript, Node.js, and Python — crafting polished products with thoughtful UX, reliable engineering, and a calm product experience.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view"
+                  className="pill-btn pill-btn-primary"
+                  prefetch={false}
+                >
+                  Resume
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link href="#contact" className="pill-btn pill-btn-secondary" prefetch={false}>
+                  Contact Me
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-[1.5rem] border border-black/10 bg-[#f4ecd6] p-6 sm:max-w-sm">
+              <p className="eyebrow">Currently</p>
+              <p className="mt-3 text-xl font-semibold leading-tight text-black">
+                Shipping polished web apps and design systems that balance product thinking, performance, and a refined user experience.
+              </p>
+            </div>
+          </div>
 
-        <p className="max-w-[700px] text-lg text-primary-foreground">
-          Full-stack software developer (React, Next.js, Node.js, Python). Based
-          in India; open to remote roles. I build fast, accessible web apps and
-          care about clear UX and maintainable code.
-        </p>
+          <div className="flex flex-wrap gap-2">
+            {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'Design systems'].map((item) => (
+              <span key={item} className="rounded-full border border-black/10 bg-[#f7f7f5] px-3 py-2 text-sm font-medium text-black/80">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1X4JXImKhHJj_tv4Mcn1ZPy4uDV5boDwj/view"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-          >
-            Resume
-          </Link>
-          <Link
-            href="#contact"
-            className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-          >
-            Contact Me
-          </Link>
+        <div className="color-block color-block-lime">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+            <div className="space-y-4">
+              <p className="eyebrow">What I care about</p>
+              <h2 className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+                Clear product thinking, strong frontend craft, and reliable implementation.
+              </h2>
+            </div>
+            <p className="max-w-xl text-lg leading-relaxed text-black/75">
+              I enjoy turning ideas into dependable interfaces, from fast prototypes to production-ready systems that feel polished, intuitive, and easy to maintain.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -69,43 +94,43 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section
-      id="about"
-      className="w-full py-12 md:py-24 lg:py-32"
-      aria-labelledby="about-heading"
-    >
-      <div className="container flex flex-col items-center justify-between gap-8 px-4 md:flex-row md:px-6">
-        <div className="flex-1 space-y-4">
-          <h2
-            id="about-heading"
-            className="text-3xl font-bold tracking-tighter"
-          >
-            About Me
+    <section id="about" className="w-full bg-white py-12 md:py-24 lg:py-32" aria-labelledby="about-heading">
+      <div className="container grid gap-8 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="section-shell space-y-6">
+          <p className="eyebrow">About</p>
+          <h2 id="about-heading" className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+            Context, craft, and care for product quality.
           </h2>
-          <p className="text-sm font-medium text-muted-foreground">
-            Software Developer at Detroit Software Consultant India · 2+ years
-            shipping React/Node products · JavaScript, TypeScript, Python
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-black/60">
+            Software Developer at Detroit Software Consultant India · 2+ years building React and Node.js products · JavaScript, TypeScript, Python
           </p>
-          <p className="text-lg text-muted-foreground">
-            I have a strong passion for creating innovative and user-friendly
-            applications. My journey in tech began at Masai School, where I built
-            a foundation in programming, problem-solving, and project management.
+          <p className="text-lg leading-relaxed text-black/75">
+            I’m a developer who cares deeply about creating useful, well-crafted digital products. My journey started with a strong foundation in programming, problem-solving, and product-minded development at Masai School, and it has grown into a focus on building thoughtful web experiences at scale.
           </p>
-          <p className="text-lg text-muted-foreground">
-            I have worked on web and mobile-oriented stacks, from REST APIs to
-            full-stack Next.js apps. I stay current with modern frameworks and
-            enjoy turning ambiguous requirements into shippable software.
+          <p className="text-lg leading-relaxed text-black/75">
+            I work across frontend and backend systems, from REST APIs and data models to full-stack Next.js applications. I enjoy translating complex requirements into dependable, user-friendly software that is easy to extend and a pleasure to use.
           </p>
         </div>
-        <Image
-          src="/profile_img.jpg"
-          width={500}
-          height={500}
-          alt="Sourav Bandyopadhyay, software developer"
-          priority
-          sizes="(max-width: 768px) 100vw, 384px"
-          className="mx-auto h-80 w-80 rounded-full object-cover md:h-96 md:w-96"
-        />
+
+        <div className="flex flex-col gap-6">
+          <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-[#f7f7f5] p-3">
+            <Image
+              src="/profile_img.jpg"
+              width={500}
+              height={500}
+              alt="Sourav Bandyopadhyay, software developer"
+              priority
+              sizes="(max-width: 768px) 100vw, 384px"
+              className="h-full w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
+          <div className="color-block color-block-lilac">
+            <p className="eyebrow">Focus</p>
+            <p className="mt-3 text-xl font-semibold leading-tight">
+              I care about the whole experience — from architecture to micro-interactions.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -113,18 +138,13 @@ function AboutSection() {
 
 function Footer() {
   return (
-    <footer className="w-full bg-primary py-6">
-      <div className="container flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0 md:px-6">
-        <p className="text-sm text-primary-foreground">
-          &copy; {new Date().getFullYear()} Sourav Bandyopadhyay. All rights
-          reserved.
+    <footer className="w-full border-t border-black/10 bg-white py-8">
+      <div className="container flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
+        <p className="text-sm text-black/70">
+          &copy; {new Date().getFullYear()} Sourav Bandyopadhyay. All rights reserved.
         </p>
-        <nav aria-label="Footer" className="flex flex-wrap gap-4 text-sm">
-          <Link
-            href="/writing"
-            className="text-primary-foreground underline-offset-4 hover:underline"
-            prefetch={false}
-          >
+        <nav aria-label="Footer" className="flex flex-wrap gap-4 text-sm text-black/70">
+          <Link href="/writing" className="underline-offset-4 hover:underline" prefetch={false}>
             Writing
           </Link>
         </nav>

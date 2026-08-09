@@ -29,31 +29,24 @@ const skills = [
 
 export function Skills() {
   return (
-    <section
-      id="skills"
-      className="w-full py-12 md:py-24 lg:py-32"
-      aria-labelledby="skills-heading"
-    >
+    <section id="skills" className="w-full bg-white py-12 md:py-24 lg:py-32" aria-labelledby="skills-heading">
       <div className="container max-w-6xl px-4 md:px-6">
-        <div className="space-y-4 text-center">
-          <h2
-            id="skills-heading"
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-          >
-            My Skills
+        <div className="space-y-4">
+          <p className="eyebrow">Skills</p>
+          <h2 id="skills-heading" className="text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
+            A practical stack for modern product development.
           </h2>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I&apos;m proficient in a wide range of languages and frameworks,
-            constantly expanding my skillset to deliver top-notch solutions.
+          <p className="max-w-2xl text-lg leading-relaxed text-black/70">
+            I work across the product stack, pairing strong UI implementation with backend reliability and thoughtful developer experience.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-8 mt-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col items-center gap-2">
-              <div className="bg-muted rounded-full w-16 h-16 flex items-center justify-center">
-                <skill.icon className="w-8 h-8 text-primary" />
+            <div key={skill.name} className="flex flex-col items-center gap-3 rounded-[1.5rem] border border-black/10 bg-[#f7f7f5] p-5 text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white">
+                <skill.icon className="h-8 w-8 text-black" />
               </div>
-              <span className="text-sm font-medium">{skill.name}</span>
+              <span className="text-sm font-semibold text-black">{skill.name}</span>
             </div>
           ))}
         </div>

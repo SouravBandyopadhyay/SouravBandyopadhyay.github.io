@@ -7,11 +7,12 @@ import { getSubstackPosts, SUBSTACK } from "@/lib/substack";
 export const metadata: Metadata = {
   title: "Writing | Sourav Bandyopadhyay",
   description:
-    "Essays and technical notes from Core Craft — practical guides on shipping software, by Sourav Bandyopadhyay.",
+    "Read thoughtful essays and practical notes on software engineering, product thinking, and building better digital products from Core Craft by Sourav Bandyopadhyay.",
   alternates: { canonical: "/writing" },
   openGraph: {
     title: "Writing · Core Craft",
-    description: SUBSTACK.description,
+    description:
+      "Essays and practical notes on building software, improving product thinking, and shipping with clarity.",
     url: "/writing",
     type: "website",
   },
@@ -24,38 +25,34 @@ export default async function WritingPage() {
   const [featured, ...rest] = posts;
 
   return (
-    <div className="relative overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_top,_rgba(180,200,220,0.35),_transparent_55%),radial-gradient(ellipse_at_80%_0%,_rgba(210,220,230,0.4),_transparent_45%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(40,55,75,0.45),_transparent_55%),radial-gradient(ellipse_at_80%_0%,_rgba(30,40,55,0.5),_transparent_45%)]"
-      />
+    <div className="relative min-h-screen overflow-hidden bg-white">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_top,_rgba(197,176,244,0.24),_transparent_58%)]" />
 
       <header className="relative mx-auto max-w-6xl px-4 pb-10 pt-6 md:px-6 md:pb-16 md:pt-10">
         <Link
           href="/"
-          className="inline-flex items-center text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+          className="inline-flex items-center text-sm font-medium text-black/70 transition hover:text-black"
           prefetch={false}
         >
           ← Portfolio
         </Link>
 
         <div className="mt-12 max-w-3xl space-y-5 md:mt-16">
-          <p className="text-xs font-medium uppercase tracking-[0.22em] text-neutral-500 dark:text-neutral-400">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/60">
             {SUBSTACK.name}
           </p>
-          <h1 className="font-heading text-5xl font-semibold tracking-tight text-neutral-900 dark:text-white md:text-6xl lg:text-7xl">
+          <h1 className="text-5xl font-semibold tracking-[-0.03em] text-black md:text-6xl lg:text-7xl">
             Writing
           </h1>
-          <p className="max-w-2xl text-lg leading-relaxed text-neutral-500 dark:text-neutral-400 md:text-xl">
-            {SUBSTACK.description} Synced live from Substack so this page always
-            reflects what&apos;s published.
+          <p className="max-w-2xl text-lg leading-relaxed text-black/70 md:text-xl">
+            Practical essays and notes on software engineering, product thinking, and building better digital experiences — published through Core Craft and synced live from Substack.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href={SUBSTACK.subscribeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-11 items-center justify-center rounded-full bg-neutral-900 px-6 text-sm font-medium text-white transition hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+              className="pill-btn pill-btn-primary"
             >
               Subscribe
             </a>
@@ -63,29 +60,24 @@ export default async function WritingPage() {
               href={SUBSTACK.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-11 items-center justify-center gap-1.5 rounded-full bg-white/70 px-6 text-sm font-medium text-neutral-900 ring-1 ring-black/5 backdrop-blur transition hover:bg-white dark:bg-white/10 dark:text-white dark:ring-white/10 dark:hover:bg-white/15"
+              className="pill-btn pill-btn-secondary"
             >
               Open Substack
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight className="ml-2 h-4 w-4" />
             </a>
           </div>
         </div>
       </header>
 
-      <section
-        aria-label="Articles"
-        className="relative mx-auto max-w-6xl px-4 pb-28 md:px-6"
-      >
+      <section aria-label="Articles" className="relative mx-auto max-w-6xl px-4 pb-28 md:px-6">
         {error && posts.length === 0 ? (
-          <div className="rounded-[1.75rem] bg-white/70 p-10 text-center ring-1 ring-black/[0.04] backdrop-blur dark:bg-white/[0.06] dark:ring-white/10">
-            <p className="text-neutral-600 dark:text-neutral-300">
-              Couldn&apos;t load the latest posts right now.
-            </p>
+          <div className="rounded-[1.75rem] border border-black/10 bg-[#f7f7f5] p-10 text-center">
+            <p className="text-black/75">Couldn&apos;t load the latest posts right now.</p>
             <a
               href={SUBSTACK.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-neutral-900 underline-offset-4 hover:underline dark:text-white"
+              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-black underline-offset-4 hover:underline"
             >
               Read on Substack
               <ArrowUpRight className="h-4 w-4" />
@@ -94,17 +86,17 @@ export default async function WritingPage() {
         ) : null}
 
         {featured ? (
-          <div className="mb-8 md:mb-10">
+          <div className="mb-8 rounded-[2rem] border border-black/10 bg-[#f4ecd6] p-4 md:mb-10 md:p-6">
             <WritingCard post={featured} featured />
           </div>
         ) : null}
 
         {rest.length > 0 ? (
-          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {rest.map((post, index) => (
               <div
                 key={post.id}
-                className="writing-card-enter mb-6 break-inside-avoid"
+                className="writing-card-enter"
                 style={{ animationDelay: `${Math.min(index * 60, 420)}ms` }}
               >
                 <WritingCard post={post} />
@@ -114,7 +106,7 @@ export default async function WritingPage() {
         ) : null}
 
         {posts.length === 0 && !error ? (
-          <p className="text-center text-neutral-500">No posts yet.</p>
+          <p className="text-center text-black/70">No posts yet.</p>
         ) : null}
       </section>
     </div>
