@@ -18,7 +18,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode, SiSubstack } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
@@ -151,17 +150,6 @@ export default function DockDemo() {
             </Tooltip>
           </DockIcon>
         ))}
-        <Separator orientation="vertical" className="h-full py-2" />
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
       </Dock>
     </div>
   );

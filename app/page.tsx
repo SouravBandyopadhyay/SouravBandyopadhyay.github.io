@@ -39,7 +39,7 @@ function HeroSection() {
                 I design and build full-stack web experiences that feel clear, fast, and genuinely useful.
               </h1>
               <p className="max-w-2xl text-lg leading-relaxed text-black/70 sm:text-xl">
-                I’m a software developer based in India focused on React, Next.js, TypeScript, Node.js, and Python — crafting polished products with thoughtful UX, reliable engineering, and a calm product experience.
+                I’m a software developer based in India focused on React, Next.js, TypeScript, Node.js, and Python, building refined products with thoughtful UX and dependable engineering.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
@@ -60,7 +60,7 @@ function HeroSection() {
             <div className="rounded-[1.5rem] border border-black/10 bg-[#f4ecd6] p-6 sm:max-w-sm">
               <p className="eyebrow">Currently</p>
               <p className="mt-3 text-xl font-semibold leading-tight text-black">
-                Shipping polished web apps and design systems that balance product thinking, performance, and a refined user experience.
+                Shipping polished web apps and design systems that balance product thinking, performance, and craft.
               </p>
             </div>
           </div>
@@ -102,13 +102,13 @@ function AboutSection() {
             Context, craft, and care for product quality.
           </h2>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-black/60">
-            Software Developer at Detroit Software Consultant India · 2+ years building React and Node.js products · JavaScript, TypeScript, Python
+            Software Developer at Detroit Software Consultant India · 3+ years building React and Node.js products · JavaScript, TypeScript, Python
           </p>
           <p className="text-lg leading-relaxed text-black/75">
-            I’m a developer who cares deeply about creating useful, well-crafted digital products. My journey started with a strong foundation in programming, problem-solving, and product-minded development at Masai School, and it has grown into a focus on building thoughtful web experiences at scale.
+            I’m a developer who cares deeply about creating useful, well-crafted digital experiences. My journey started with a strong foundation in programming and problem-solving at Masai School, and it has grown into a focus on building thoughtful web experiences at scale.
           </p>
           <p className="text-lg leading-relaxed text-black/75">
-            I work across frontend and backend systems, from REST APIs and data models to full-stack Next.js applications. I enjoy translating complex requirements into dependable, user-friendly software that is easy to extend and a pleasure to use.
+            I work across frontend and backend systems, from REST APIs and data models to full-stack Next.js applications, translating complex requirements into dependable software that feels clear and pleasant to use.
           </p>
         </div>
 
