@@ -3,20 +3,47 @@ import { Globe, Github, Star, ArrowUpRight, Zap } from "lucide-react";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="w-full bg-[#f7f7f5] py-16 md:py-24 lg:py-32" aria-labelledby="projects-heading">
+    <section
+      id="projects"
+      className="w-full bg-[#f7f7f5] py-16 md:py-24 lg:py-32"
+      aria-labelledby="projects-heading"
+    >
       <div className="container mx-auto flex flex-col items-center justify-center space-y-12 px-4 md:px-6">
         <div className="max-w-3xl space-y-6 text-center">
           <p className="eyebrow">Featured Work</p>
-          <h2 id="projects-heading" className="text-4xl font-semibold tracking-[-0.03em] text-black md:text-5xl">
+          <h2
+            id="projects-heading"
+            className="text-4xl font-semibold tracking-[-0.03em] text-black md:text-5xl"
+          >
             Selected work shaped by clarity, craft, and product thinking.
           </h2>
           <p className="text-lg leading-relaxed text-black/70">
-            A mix of production applications, thoughtful tooling, and experiments that reflect how I build and ship.
+            A mix of production applications, thoughtful tooling, and
+            experiments that reflect how I build and ship.
           </p>
         </div>
 
         <div className="grid w-full max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Featured Production Apps */}
+          <ProjectCard
+            title="The Daily Commit"
+            description="A curated daily feed of the most interesting technical stories from Hacker News, arXiv, and GitHub. Features an elegant newspaper-style reading experience with interest-ranked stories, full-text search, and topic browsing."
+            techStack={[
+              "Astro",
+              "TypeScript",
+              "CSS",
+              "Pagefind",
+              "Node.js",
+              "Claude AI",
+              "Google GenAI",
+            ]}
+            imageSrc={"/the-daily-commit.jpeg"}
+            liveDemoLink="https://thedailycommit.com"
+            repoLink="#"
+            featured={true}
+            status="Production"
+            category="Content Aggregator"
+          />
           <ProjectCard
             title="Link-Trim"
             description="A production-ready URL shortener with analytics dashboard, custom domains, and enterprise-grade performance."
@@ -141,8 +168,8 @@ function ProjectCard({
                 status === "Production"
                   ? "bg-black text-white"
                   : status === "Live"
-                  ? "bg-[#dceeb1] text-black"
-                  : "bg-[#c5b0f4] text-black"
+                    ? "bg-[#dceeb1] text-black"
+                    : "bg-[#c5b0f4] text-black"
               }`}
             >
               {status}
