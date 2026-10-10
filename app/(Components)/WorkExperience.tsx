@@ -4,9 +4,28 @@ import { useState } from "react";
 
 const roles = [
   {
+    id: "bain",
+    company: "Bain & Company",
+    location: "Gurugram, Haryana, India · On-site",
+    tenure: "Full-time · Aug 2026 - Present",
+    title: "Associate",
+    period: "Aug 2026 - Present",
+    summary:
+      "Collaborating with customer teams on a data product that cleans and transforms information, then makes it usable through chat and downloadable presentations.",
+    bullets: [
+      "Partner with customer teams to build a tool for data cleaning, transformation, and turning raw inputs into clearer, more meaningful datasets.",
+      "Shape the workflow so people can explore prepared data and understand what it is saying, rather than stopping at a cleaned file.",
+      "Develop a data chat experience that lets users ask questions about their data in plain language.",
+      "Add PowerPoint download so teams can take the generated insights into a presentation they can share.",
+    ],
+  },
+  {
     id: "lead",
+    company: "Detroit Software Consultant India Pvt Ltd.",
+    location: "Gurugram, Haryana, India · On-site",
+    tenure: "Full-time · 3 yrs 4 mos",
     title: "Associate Team Lead",
-    period: "Apr 2026 - Present",
+    period: "Apr 2026 - Aug 2026",
     summary:
       "Leading delivery across product and engineering efforts while mentoring developers and keeping execution aligned with client goals.",
     bullets: [
@@ -18,6 +37,9 @@ const roles = [
   },
   {
     id: "developer",
+    company: "Detroit Software Consultant India Pvt Ltd.",
+    location: "Gurugram, Haryana, India · On-site",
+    tenure: "Full-time · 3 yrs 4 mos",
     title: "Software Developer",
     period: "Jun 2024 - May 2026",
     summary:
@@ -31,6 +53,9 @@ const roles = [
   },
   {
     id: "associate",
+    company: "Detroit Software Consultant India Pvt Ltd.",
+    location: "Gurugram, Haryana, India · On-site",
+    tenure: "Full-time · 3 yrs 4 mos",
     title: "Associate Software Developer",
     period: "Apr 2023 - Jun 2024",
     summary:
@@ -64,11 +89,11 @@ export default function WorkExperienceSection() {
         <div className="rounded-[2rem] border border-black/10 bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.04)] sm:p-8 lg:p-10">
           <div className="flex flex-col gap-3 border-b border-black/10 pb-5 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <h3 className="text-2xl font-semibold tracking-[-0.02em]">Detroit Software Consultant India Pvt Ltd.</h3>
-              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-black/60">Gurugram, Haryana, India · On-site</p>
+              <h3 className="text-2xl font-semibold tracking-[-0.02em]">{activeRoleData.company}</h3>
+              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-black/60">{activeRoleData.location}</p>
             </div>
             <div className="rounded-full border border-black/10 bg-[#f7f7f5] px-3 py-1 text-sm font-medium text-black/75">
-              Full-time · 3 yrs 5 mos
+              {activeRoleData.tenure}
             </div>
           </div>
 

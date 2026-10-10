@@ -103,7 +103,7 @@ function AboutSection() {
             Context, craft, and care for product quality.
           </h2>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-black/60">
-            Software Developer at Detroit Software Consultant India · 3+ years building React and Node.js products · JavaScript, TypeScript, Python
+            Associate at Bain & Company, Gurugram · previously Detroit Software Consultant India · JavaScript, TypeScript, Python
           </p>
           <p className="text-lg leading-relaxed text-black/75">
             I’m a developer who cares deeply about creating useful, well-crafted digital experiences. My journey started with a strong foundation in programming and problem-solving at Masai School, and it has grown into a focus on building thoughtful web experiences at scale.

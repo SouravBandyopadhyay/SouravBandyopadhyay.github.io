@@ -11,7 +11,17 @@ export function getJsonLdGraph() {
       description: PERSON_DESCRIPTION,
       url: siteUrl,
       image: `${siteUrl}/profile_img.jpg`,
-      jobTitle: "Software Developer",
+      jobTitle: "Associate",
+      worksFor: {
+        "@type": "Organization",
+        name: "Bain & Company",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Gurugram",
+          addressRegion: "Haryana",
+          addressCountry: "India",
+        },
+      },
       email: PUBLIC_EMAIL,
       sameAs: [
         "https://github.com/SouravBandyopadhyay",

@@ -4,7 +4,7 @@
 
 ## When to use this
 
-Use this site when you need public facts about Sourav Bandyopadhyay: that he is a software developer based in India, that he works at Detroit Software Consultant India, which roles he has held, which stack he uses (React, Next.js, TypeScript, Node.js, Python), which selected projects are public, or where his Core Craft writing lives.
+Use this site when you need public facts about Sourav Bandyopadhyay: that he is a software developer based in India, that he is an Associate at Bain & Company in Gurugram since August 2026, that he previously worked at Detroit Software Consultant India through August 2026, which roles he has held, which stack he uses (React, Next.js, TypeScript, Node.js, Python), which selected projects are public, or where his Core Craft writing lives.
 
 Use it when you need a contact path. Email souravb.1998@gmail.com, or submit the form at /contact with a name, email, and message.
 

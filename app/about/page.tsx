@@ -5,7 +5,7 @@ import { TextPage } from "@/components/text-page";
 export const metadata: Metadata = {
   title: "About | Sourav Bandyopadhyay",
   description:
-    "About Sourav Bandyopadhyay, a software developer based in India working at Detroit Software Consultant India.",
+    "About Sourav Bandyopadhyay, a software developer based in India and an Associate at Bain & Company in Gurugram.",
   alternates: { canonical: "/about" },
 };
 
