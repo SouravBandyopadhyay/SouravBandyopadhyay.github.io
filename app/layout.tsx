@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import DockDemo from "./navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { getSiteUrl } from "@/lib/site";
+import { getJsonLdGraph } from "@/lib/jsonld";
+import { PERSON_DESCRIPTION } from "@/lib/agent-content";
 import { JsonLd } from "@/components/json-ld";
 
 const siteUrl = getSiteUrl();
@@ -20,8 +22,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Sourav Bandyopadhyay | Full-Stack Software Developer Portfolio",
-  description:
-    "Portfolio of Sourav Bandyopadhyay, a full-stack software developer based in India building modern web products with React, Next.js, TypeScript, Node.js, and Python.",
+  description: PERSON_DESCRIPTION,
   keywords: [
     "Sourav Bandyopadhyay",
     "Software Developer Portfolio",
@@ -87,33 +88,6 @@ const fontMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const jsonLdPerson = {
-  "@type": "Person",
-  "@id": `${siteUrl}/#person`,
-  name: "Sourav Bandyopadhyay",
-  url: siteUrl,
-  image: `${siteUrl}/profile_img.jpg`,
-  jobTitle: "Software Developer",
-  email: "souravb.1998@gmail.com",
-  sameAs: [
-    "https://github.com/SouravBandyopadhyay",
-    "https://www.linkedin.com/in/souravbandyopadhyay/",
-    "https://corecraft.substack.com/",
-    "https://leetcode.com/u/Sourav_280598/",
-    "https://uiverse.io/profile/SouravBandyopadhyay",
-  ],
-};
-
-const jsonLdWebSite = {
-  "@type": "WebSite",
-  "@id": `${siteUrl}/#website`,
-  name: "Sourav Bandyopadhyay — Portfolio",
-  url: siteUrl,
-  description:
-    "Portfolio of Sourav Bandyopadhyay, full-stack software developer.",
-  publisher: { "@id": `${siteUrl}/#person` },
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -129,7 +103,7 @@ export default function RootLayout({
           fontMono.variable
         )}
       >
-        <JsonLd data={[jsonLdPerson, jsonLdWebSite]} />
+        <JsonLd data={getJsonLdGraph()} />
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <a

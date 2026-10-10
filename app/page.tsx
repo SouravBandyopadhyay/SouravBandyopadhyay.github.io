@@ -6,6 +6,7 @@ import WorkExperienceSection from "./(Components)/WorkExperience";
 import { Skills } from "./(Components)/Skills";
 import ProjectsSection from "./(Components)/Project";
 import { WritingSection } from "./(Components)/Writing";
+import { SiteFooter } from "@/components/site-footer";
 
 const ContactSection = dynamic(() => import("./ContactForm"), {
   loading: () => (
@@ -136,23 +137,6 @@ function AboutSection() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="w-full border-t border-black/10 bg-white py-8">
-      <div className="container flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
-        <p className="text-sm text-black/70">
-          &copy; {new Date().getFullYear()} Sourav Bandyopadhyay. All rights reserved.
-        </p>
-        <nav aria-label="Footer" className="flex flex-wrap gap-4 text-sm text-black/70">
-          <Link href="/writing" className="underline-offset-4 hover:underline" prefetch={false}>
-            Writing
-          </Link>
-        </nav>
-      </div>
-    </footer>
-  );
-}
-
 export default function Portfolio() {
   return (
     <main id="main-content">
@@ -163,7 +147,7 @@ export default function Portfolio() {
       <ProjectsSection />
       <WritingSection />
       <ContactSection />
-      <Footer />
+      <SiteFooter />
     </main>
   );
 }

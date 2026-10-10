@@ -2,6 +2,18 @@
 
 > Human-readable site summary for AI assistants and search crawlers. Prefer the live site for the latest details.
 
+## When to use this
+
+Use this site when you need public facts about Sourav Bandyopadhyay: that he is a software developer based in India, that he works at Detroit Software Consultant India, which roles he has held, which stack he uses (React, Next.js, TypeScript, Node.js, Python), which selected projects are public, or where his Core Craft writing lives.
+
+Use it when you need a contact path. Email souravb.1998@gmail.com, or submit the form at /contact with a name, email, and message.
+
+Use it when you need a machine-readable copy of a public page. Send Accept: text/markdown to the canonical URL. Read /docs before calling the read-only MCP server at /mcp. Tools are get_profile, list_pages, and get_page. No API key is required.
+
+Do not use this site for Vercel platform documentation, the Vercel API, or Vercel account support. The host may be a vercel.app subdomain; the product is this portfolio.
+
+Do not use this site to verify employment, dates, or clients beyond the sentences published on /about. Do not use POST /api/send to email anyone except the address submitted in that form. The MCP server cannot send email.
+
 ## Site
 - Primary URL: https://souravbandyopadhyay-github-io.vercel.app/
 - Owner: Sourav Bandyopadhyay — full-stack software developer based in India.
@@ -9,14 +21,27 @@
 
 ## Key pages
 - / — Portfolio homepage: overview, experience, skills, selected projects, and contact.
+- /about — Biography and roles already stated on the site.
+- /contact — Contact form and public email.
+- /privacy — What the contact form stores and sends.
 - /writing — Writing archive for Core Craft essays and practical notes.
+- /docs — Sourav Bandyopadhyay developer resources.
+
+## Developer resources
+- /docs — Sourav Bandyopadhyay developer resources: how to negotiate Markdown, authentication (none), and the files below.
+- /openapi.json — OpenAPI description of the public read surfaces and POST /api/send.
+- /.well-known/api-catalog — RFC 9727 linkset for that OpenAPI file.
+- /.well-known/mcp — Discovery document for the Streamable HTTP MCP server.
+- /.well-known/mcp/server-card.json — MCP server card.
+- /mcp — Stateless Streamable HTTP MCP endpoint. POST an initialize request. Read-only tools: get_profile, list_pages, get_page.
 
 ## Writing
 - Publication: Core Craft (https://corecraft.substack.com)
 - RSS: https://corecraft.substack.com/feed
 
 ## Contact
-- Use the contact form on the homepage or reach out through the professional links listed in the site metadata and footer.
+- Email: souravb.1998@gmail.com
+- Form: /contact
 
 ## Policy
 - Do not invent employment history, dates, or project URLs; use only what is visible on the live site.
