@@ -6,6 +6,7 @@ import {
   LucideProps,
   MailIcon,
   Pencil,
+  Siren,
   User,
 } from "lucide-react";
 
@@ -51,6 +52,7 @@ const DATA = {
     { href: "/#top", icon: HomeIcon, label: "Home" },
     { href: "/#about", icon: User, label: "About" },
     { href: "/#projects", icon: FolderKanban, label: "Projects" },
+    { href: "/production-incidents", icon: Siren, label: "Production" },
     { href: "/#writing", icon: Pencil, label: "Writing" },
     { href: "/#contact", icon: MailIcon, label: "Contact" },
   ],

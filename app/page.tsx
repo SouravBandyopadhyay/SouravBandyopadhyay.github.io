@@ -5,6 +5,8 @@ import { ArrowRight } from "lucide-react";
 import WorkExperienceSection from "./(Components)/WorkExperience";
 import { Skills } from "./(Components)/Skills";
 import ProjectsSection from "./(Components)/Project";
+import { ProductionIncidents } from "./(Components)/ProductionIncidents";
+import { WhyHireMe } from "./(Components)/WhyHireMe";
 import { WritingSection } from "./(Components)/Writing";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -145,6 +147,8 @@ export default function Portfolio() {
       <WorkExperienceSection />
       <Skills />
       <ProjectsSection />
+      <ProductionIncidents />
+      <WhyHireMe />
       <WritingSection />
       <ContactSection />
       <SiteFooter />

@@ -5,6 +5,7 @@ const links = [
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" },
   { href: "/writing", label: "Writing" },
+  { href: "/production-incidents", label: "Production stories" },
   { href: "/docs", label: "Developer resources" },
 ];
 
